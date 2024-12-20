@@ -1,0 +1,94 @@
+/* Scroll Container Styles */
+.scroll-container {
+  display: flex; /* Use flexbox for horizontal layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px 0; /* Optional: Add some vertical padding */
+  scroll-snap-type: x mandatory; /* Enable snapping for better scrolling UX */
+  gap: 15px; /* Space between items */
+}
+
+/* Scrollbar Customization */
+.scroll-container::-webkit-scrollbar {
+  height: 8px; /* Height of the scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: var(--surface-color); /* Background of the scrollbar track */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: var(--accent-color); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+/* Scroll Content Styles */
+.scroll-content {
+  display: flex; /* Ensure horizontal alignment */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 15px; /* Space between items */
+  width: 100%; /* Make the content span the full width of the container */
+}
+
+/* Service Item Styles */
+.service-item {
+  background-color: var(--surface-color);
+  flex: 0 0 220px; /* Fixed width for each item */
+  max-width: 220px; /* Ensure items don’t stretch beyond this width */
+  height: 220px; /* Fixed height */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 70%);
+  padding: 15px;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding in box size */
+  overflow: hidden; /* Prevent overflow issues */
+  transition: transform 0.3s, box-shadow 0.3s;
+  scroll-snap-align: center; /* Enable snapping alignment for each item */
+}
+
+
+.service-item:hover {
+  transform: translateY(-5px); /* Lift slightly on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-item:hover h3,
+.service-item:hover p {
+  color: var(--accent-color); /* Change text color on hover */
+}
+
+.service-item .icon {
+  color: var(--accent-color);
+  margin: 0 auto 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.service-item h3 {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+  white-space: normal; /* Allow text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  min-height: 36px; /* Ensure consistent space for all headings */
+}
+
+.service-item p {
+  font-size: 12px;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  flex-grow: 1; /* Ensure paragraphs fill remaining space */
+  margin: 0;
+}
