@@ -2,9 +2,10 @@
 .scroll-container {
   display: flex; /* Use flexbox for horizontal layout */
   overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrollbars */
   padding: 10px 0; /* Optional: Add some vertical padding */
   scroll-snap-type: x mandatory; /* Enable snapping for better scrolling UX */
-  gap: 15px; /* Space between items */
+  gap: 3px; /* Space between items */
 }
 
 /* Scrollbar Customization */
@@ -13,7 +14,7 @@
 }
 
 .scroll-container::-webkit-scrollbar-track {
-  background: var(--surface-color); /* Background of the scrollbar track */
+  background: #f1f1f1; /* Background of the scrollbar track */
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
@@ -25,8 +26,12 @@
 .scroll-content {
   display: flex; /* Ensure horizontal alignment */
   flex-wrap: nowrap; /* Prevent wrapping */
-  gap: 15px; /* Space between items */
+  gap: 3px; /* Space between items */
   width: 100%; /* Make the content span the full width of the container */
+}
+
+.scroll-container {
+  scroll-behavior: smooth;
 }
 
 /* Service Item Styles */
@@ -92,3 +97,36 @@
   flex-grow: 1; /* Ensure paragraphs fill remaining space */
   margin: 0;
 }
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+  .scroll-content {
+    justify-content: space-around; /* Ensure proper spacing on smaller screens */
+  }
+
+  .service-item {
+    flex: 0 0 180px; /* Reduce size for smaller screens */
+    max-width: 180px;
+    height: 180px; /* Keep height equal to width for square boxes */
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-content {
+    justify-content: space-around; /* Center items on very small screens */
+  }
+
+  .service-item {
+    flex: 0 0 140px; /* Smaller fixed size for tiny screens */
+    max-width: auto;
+    height: auto; /* Keep height equal to width for square boxes */
+  }
+}
+
+
+
+
+
+
+
+

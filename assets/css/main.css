@@ -1052,13 +1052,50 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Prevent scrolling outside the wrapper */
+}
+
+.scroll-container {
+  flex: 1; /* Allow the scroll container to fill the remaining space */
+  overflow-x: auto; /* Horizontal scrolling */
+  white-space: nowrap; /* Prevent content wrapping */
+  scroll-behavior: smooth;
+}
+
+.scroll-btn {
+  background-color: var(--surface-color);
+  color: var(--accent-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+
+
 /* Scroll Container Styles */
 .scroll-container {
   display: flex; /* Use flexbox for horizontal layout */
   overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrollbars */
   padding: 10px 0; /* Optional: Add some vertical padding */
   scroll-snap-type: x mandatory; /* Enable snapping for better scrolling UX */
-  gap: 0px; /* Space between items */
+  gap: 3px; /* Space between items */
 }
 
 /* Scrollbar Customization */
@@ -1067,7 +1104,7 @@ section,
 }
 
 .scroll-container::-webkit-scrollbar-track {
-  background: var(--surface-color); /* Background of the scrollbar track */
+  background: #f1f1f1; /* Background of the scrollbar track */
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
@@ -1079,8 +1116,12 @@ section,
 .scroll-content {
   display: flex; /* Ensure horizontal alignment */
   flex-wrap: nowrap; /* Prevent wrapping */
-  gap: 0px; /* Space between items */
+  gap: 3px; /* Space between items */
   width: 100%; /* Make the content span the full width of the container */
+}
+
+.scroll-container {
+  scroll-behavior: smooth;
 }
 
 /* Service Item Styles */
@@ -1167,10 +1208,11 @@ section,
 
   .service-item {
     flex: 0 0 140px; /* Smaller fixed size for tiny screens */
-    max-width: 140px;
-    height: 140px; /* Keep height equal to width for square boxes */
+    max-width: auto;
+    height: auto; /* Keep height equal to width for square boxes */
   }
 }
+
 
 /*--------------------------------------------------------------
 # Call To Action Section
