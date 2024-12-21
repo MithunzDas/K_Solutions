@@ -569,17 +569,52 @@
     </section>
 
     <script>
+      let scrollInterval; // Variable to store the interval ID
+
+        // Function to scroll completely left
         function scrollLeft() {
-        const container = document.querySelector('.scroll-container');
-        container.scrollBy({ left: -220, behavior: 'smooth' }); // Scroll left by the width of one item
-      }
-
-      function scrollRight() {
-        const container = document.querySelector('.scroll-container');
-        container.scrollBy({ left: 220, behavior: 'smooth' }); // Scroll right by the width of one item
+          const container = document.querySelector('.scroll-container');
+          container.scrollTo({ left: 0, behavior: 'smooth' }); // Move to the far left
         }
-
-    </script>
+        
+        // Function to scroll completely right
+        function scrollRight() {
+          const container = document.querySelector('.scroll-container');
+          container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' }); // Move to the far right
+        }
+        
+        // Function to start continuous scrolling
+        function startScrolling(direction) {
+          const container = document.querySelector('.scroll-container');
+          scrollInterval = setInterval(() => {
+            container.scrollBy({ left: direction === 'left' ? -150 : 150, behavior: 'smooth' });
+          }, 100); // Adjust the interval timing as needed for smoothness
+        }
+        
+        // Function to stop continuous scrolling
+        function stopScrolling() {
+          clearInterval(scrollInterval);
+        }
+        
+        // Event listeners for left button
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
+        
+        if (leftArrow) {
+          leftArrow.addEventListener('mousedown', () => startScrolling('left'));
+          leftArrow.addEventListener('mouseup', stopScrolling);
+          leftArrow.addEventListener('mouseleave', stopScrolling);
+          leftArrow.addEventListener('click', scrollLeft); // Click event to move completely to the left
+        }
+        
+        // Event listeners for right button
+        if (rightArrow) {
+          rightArrow.addEventListener('mousedown', () => startScrolling('right'));
+          rightArrow.addEventListener('mouseup', stopScrolling);
+          rightArrow.addEventListener('mouseleave', stopScrolling);
+          rightArrow.addEventListener('click', scrollRight); // Click event to move completely to the right
+      }
+      </script>
     <!-- /Service Section -->
     
 

@@ -364,13 +364,13 @@ h6 {
   }
 
   .navmenu .dropdown ul::-webkit-scrollbar-thumb {
-    background-color: var(--nav-dropdown-hover-color);
+    background-color: #888;
     border-radius: 10px;
     transition: background-color 0.3s ease;
   }
 
   .navmenu .dropdown ul::-webkit-scrollbar-thumb:hover {
-    background-color: #ffb400; /* Lighter shade on hover */
+    background-color: #777; /* Lighter shade on hover */
   }
 
 }
@@ -747,7 +747,7 @@ h6 {
 }
 
 .page-title .heading {
-  padding: 80px 0;
+  padding: 100px 0 20px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -1068,8 +1068,8 @@ section,
 }
 
 .scroll-btn {
-  background-color: var(--surface-color);
-  color: var(--accent-color);
+  background-color: #f1f1f1;
+  color: #888;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -1108,10 +1108,13 @@ section,
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
-  background: var(--accent-color); /* Color of the scrollbar thumb */
-  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Rounded corners for the scrollbar thumb */
 }
 
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Slightly darker on hover */
+}
 /* Scroll Content Styles */
 .scroll-content {
   display: flex; /* Ensure horizontal alignment */
@@ -1709,6 +1712,7 @@ section,
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  /* text-align: center; */
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
@@ -1740,6 +1744,34 @@ section,
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
+.services-list-container {
+  max-height: 300px; /* Adjust height as needed */
+  overflow-y: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 #f0f0f0; /* Thumb and track colors */
+}
+
+.services-list-container::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.services-list-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Thumb color */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.services-list-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+
+.services-list-container::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Track color */
+}
+
+
+
+
 .service-details .service-box {
   background-color: var(--surface-color);
   padding: 20px;
@@ -1769,6 +1801,7 @@ section,
   align-items: center;
   padding: 12px 15px;
   margin-top: 15px;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
@@ -1777,7 +1810,7 @@ section,
 }
 
 .service-details .services-list a i {
-  font-size: 16px;
+  font-size: 12px;
   margin-right: 8px;
   color: var(--accent-color);
 }
@@ -1802,7 +1835,7 @@ section,
   align-items: center;
   padding: 10px 0;
   transition: 0.3s;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .service-details .download-catalog a:first-child {
