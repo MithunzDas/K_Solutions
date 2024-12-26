@@ -1753,6 +1753,32 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+/* buttton design */
+
+.portfolio-details .portfolio-info .filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  margin-bottom: 20px;
+}
+
+/* for tablets and smaller screen */
+@media (max-width:762px){
+  .portfolio-details .portfolio-info .filter-buttons
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* For mobile screen */
+@media (max-width:576px) {
+  .portfolio-details .portfolio-info .filter-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
