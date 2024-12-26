@@ -728,6 +728,18 @@ h6 {
   opacity: 1;
 }
 
+/* Reduce Margins Without Changing Grid Columns */
+.container {
+  max-width: 95%; /* Adjust container width */
+  padding: 0 8px;  /* Reduce horizontal padding */
+}
+
+.row {
+  margin-left: -0px; /* Adjust row margins */
+  margin-right: -0px;
+}
+
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -2129,3 +2141,5 @@ section,
     opacity: 1;
   }
 }
+
+
