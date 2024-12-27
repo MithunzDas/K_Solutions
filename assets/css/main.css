@@ -1850,21 +1850,24 @@ section,
 .service-details .services-list a i {
   font-size: 12px;
   margin-right: 8px;
-  color: var(--accent-color);
+  color: var(--contrast-color);
 }
 
 .service-details .services-list a.active {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: var(--accent-color);
+  background-color: var(--background-color);
+  border: 1px solid #444444;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+;
 }
 
 .service-details .services-list a.active i {
-  color: var(--contrast-color);
+  color: var(--accent-color);
 }
 
 .service-details .services-list a:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  color: var(--accent-color);
+  background-color: rgba(37, 160, 18, 0.7);;
+  color: #312f2f;
 }
 
 .service-details .download-catalog a {
@@ -1966,12 +1969,12 @@ section,
 }
 
 .training-filter-btn:hover {
-  background-color: #25A012;
+  background-color: rgba(37, 160, 18, 0.7);
   color: #312f2f;
 }
 
 .training-filter-btn.active {
-  background-color: #25A012;
+  background-color: rgba(37, 160, 18, 0.7);
   color: #312f2f;
 }
 
