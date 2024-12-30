@@ -502,6 +502,71 @@ h6 {
   }
 }
 
+@media (max-width: 720px) {
+  .mobile-nav-toggle {
+    font-size: 24px; /* Adjusted for smaller screens */
+    margin-right: 8px;
+  }
+
+  .navmenu ul {
+    inset: 50px 10px 10px 10px; /* Reduce padding/margin for small screens */
+    padding: 5px 0;
+    max-height: 70vh; /* Slightly smaller max height */
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    padding: 8px 15px; /* Reduce padding for smaller screens */
+    font-size: 15px; /* Adjust font size for readability */
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 10px;
+    width: 25px;
+    height: 25px; /* Smaller icons */
+  }
+
+  .navmenu .dropdown ul {
+    margin: 5px 10px; /* Adjust margin for nested dropdowns */
+    max-height: 60vh; /* Smaller height for nested menus */
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    font-size: 28px; /* Slightly smaller for active toggle */
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-nav-toggle {
+    font-size: 20px; /* Adjust further for very small screens */
+  }
+
+  .navmenu ul {
+    inset: 40px 5px 5px 5px; /* Compact layout */
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    padding: 5px 10px;
+    font-size: 14px; /* Smaller font for readability */
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    width: 20px;
+    height: 20px; /* Adjust icon size */
+  }
+
+  .navmenu .dropdown ul {
+    max-height: 50vh; /* Smaller dropdowns for very small screens */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Global Footer
