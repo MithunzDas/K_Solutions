@@ -563,7 +563,7 @@ h6 {
   }
 
   .navmenu .dropdown ul {
-    max-height: 55vh; /* Smaller dropdowns for very small screens */
+    max-height: 50vh; /* Smaller dropdowns for very small screens */
   }
 }
 
