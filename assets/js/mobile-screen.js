@@ -36,6 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
         .ready-secure-business a:hover {
           color: var(--accent-color);
         }
+
+        .download-catalog a i {
+          color: var(--accent-color);
+          margin-right: 8px;
+        }
+
+        .download-catalog a + a {
+          border-top: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+          padding-top: 10px;
+          margin-top: 10px;
+        }
       }
     `;
     document.head.appendChild(style);
