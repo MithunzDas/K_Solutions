@@ -139,13 +139,11 @@
     </div><!-- End Page Title -->
 
     <!-- Portfolio Details Section -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <section id="service-details" class="service-details section"> 
+        <div class="row gy-1">
           <div class="col-lg-5">
             <!-- Services list code here -->
-            <section id="service-details" class="service-details section">
               <div class="service-box"> 
                 <h4>Services List</h4>
                 <div class="services-list-container">
@@ -174,61 +172,7 @@
                   </div>
                 </div><!-- End Services List -->
               </div>
-              
-              <script src="assets/js/service-details-scroll.js"></script>
-
-              <div class="service-box download-catalog">
-                <h4>Download Catalog</h4>
-                <div class="download-catalog">
-                  <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
-                  <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
-                </div>
-              </div><!-- End Services List -->
-
-              <div class="service-box ready-secure-business" data-aos="fade-up" data-aos-delay="400">
-                <h4>Ready to Secure Your Business?</h4>
-                <p>Contact us today to learn how Kasturi Solutions can help you.</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                  <!-- Google Form Link -->
-                  <p class="d-flex align-items-center mb-0" style="margin-right: 10px;">
-                    <i class="bi bi-google me-2"></i>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_JPuWDESKD26TdwunNeHQNbWnwy7RsaSL5kZvydr7DPnk2A/viewform?embedded=true" target="_blank" style="
-                    color: #312f2f; 
-                    border: 2px solid #25A012; 
-                    border-radius: 4px; 
-                    font-family: 'Poppins', sans-serif; 
-                    font-size: 14px; 
-                    padding: 8px 30px; 
-                    text-decoration: none; 
-                    text-align: center; 
-                    background-color: transparent; 
-                    transition: background-color 0.3s, color 0.3s;" 
-                  onmouseover="this.style.backgroundColor='#25A012';" 
-                  onmouseout="this.style.backgroundColor='transparent'; this.style.color='#312f2f';">Submit a Query</a>
-                  </p>
-                
-                  <!-- Get in Touch Button -->
-                  <a href="index.html#contact" class="btn btn-primary" style="
-                      color: #312f2f; 
-                      border: 2px solid #25A012; 
-                      border-radius: 4px; 
-                      font-family: 'Poppins', sans-serif; 
-                      font-size: 14px; 
-                      padding: 8px 30px; 
-                      text-decoration: none; 
-                      text-align: center; 
-                      background-color: transparent; 
-                      transition: background-color 0.3s;" 
-                      onmouseover="this.style.backgroundColor='#25A012';" 
-                      onmouseout="this.style.backgroundColor='transparent';">
-                    Get in Touch
-                  </a>
-                </div>              
-              </div>  
           </div>
-
-          <script src="assets/js/mobile-screen.js"></script>
 
             <div class="col-lg-7">
               <section id="portfolio-details" class="portfolio-details section">
@@ -245,13 +189,10 @@
                 </div>
             
                 <!-- Content Section -->
-                <section id="portfolio-details" class="portfolio-details section">
                   <div id="development-content" class="development-content" style="text-align: justify;">
                     <!-- Default Content -->
-                    <h3>Data Analytics and Reports</h3>
-                    
-                  </div>
-            
+                    <h3>Data Analytics and Reports</h3>                    
+                  </div>            
                   <script>
                     // Function to update the active class and load content dynamically
                     function filterDevelopment(type) {
@@ -373,23 +314,76 @@
                       setTimeout(() => {
                         developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
                         developmentContent.style.opacity = 1;
+                        developmentContent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                       }, 300);
                     }
             
                     window.onload = function() {
                       filterDevelopment('Data-Analytics-and-Reports');
                     };
-                  </script>
-                </section>
+                  </script>                
               </section>
-            </div>
-            
-
+            </div>    
         </div>
-
-      </div>
-
-    </section><!-- /Portfolio Details Section -->
+      
+        <div class="row gy-1">
+          <div class="col-lg-5">
+              <div class="service-box" data-aos="fade-up" data-aos-delay="200">
+                <h4>Download Catalog</h4>
+                <div class="download-catalog">
+                  <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
+                  <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
+                </div>
+              </div>
+            <!-- Download Catalog -->
+          </div>
+          <div class="col-lg-7">
+              <div class="service-box" data-aos="fade-up" data-aos-delay="400">
+                <h4>Ready to Secure Your Business?</h4>
+                <p>Contact us today to learn how Kasturi Solutions can help you.</p>
+                
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- Google Form Link -->
+                  <p class="d-flex align-items-center mb-0" style="margin-right: 10px;">
+                    <i class="bi bi-google me-2"></i>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_JPuWDESKD26TdwunNeHQNbWnwy7RsaSL5kZvydr7DPnk2A/viewform?embedded=true" target="_blank" style="
+                    color: #312f2f; 
+                    border: 2px solid #25A012; 
+                    border-radius: 4px; 
+                    font-family: 'Poppins', sans-serif; 
+                    font-size: 14px; 
+                    padding: 8px 30px; 
+                    text-decoration: none; 
+                    text-align: center; 
+                    background-color: transparent; 
+                    transition: background-color 0.3s, color 0.3s;" 
+                  onmouseover="this.style.backgroundColor='#25A012';" 
+                  onmouseout="this.style.backgroundColor='transparent'; this.style.color='#312f2f';">Submit a Query</a>
+                  </p>
+                
+                  <!-- Get in Touch Button -->
+                  <a href="index.html#contact" class="btn btn-primary" style="
+                      color: #312f2f; 
+                      border: 2px solid #25A012; 
+                      border-radius: 4px; 
+                      font-family: 'Poppins', sans-serif; 
+                      font-size: 14px; 
+                      padding: 8px 30px; 
+                      text-decoration: none; 
+                      text-align: center; 
+                      background-color: transparent; 
+                      transition: background-color 0.3s;" 
+                      onmouseover="this.style.backgroundColor='#25A012';" 
+                      onmouseout="this.style.backgroundColor='transparent';">
+                    Get in Touch
+                  </a>
+                </div>              
+              </div> 
+          </div>
+        </div>
+      </section>      
+    </div>
+      <!-- /Portfolio Details Section -->
 
   </main>
 
@@ -484,6 +478,7 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/js/service-details-scroll.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

@@ -1890,7 +1890,9 @@ section,
 .portfolio-details .portfolio-info {
   background-color: var(--surface-color);
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 2px rgba(0, 0, 0, 0.5);
+  margin-top: -75px;
+  margin-bottom: 15px;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1898,8 +1900,10 @@ section,
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  box-shadow: 0px 0 2px rgba(0, 0, 0, 0.2);
   /* text-align: center; */
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 85%); 
+  text-align: center;
 }
 
 .portfolio-details .portfolio-info ul {
@@ -1935,14 +1939,46 @@ section,
   gap: 10px; 
   flex-wrap: wrap; 
   justify-content: center; 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.portfolio-details .portfolio-info .filter-buttons button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.portfolio-details .portfolio-info .filter-buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Light highlight */
+  transform: skewX(-30deg);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.portfolio-details .portfolio-info .filter-buttons button:hover::before {
+  left: 100%;
+}
+
+.portfolio-details .portfolio-info .filter-buttons button:hover {
+  transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.portfolio-details .portfolio-info .filter-buttons button span {
+  position: relative;
+  z-index: 2; /* Ensures text stays on top of the hover effect */
 }
 
 /* for tablets and smaller screen */
-@media (max-width:762px){
-  .portfolio-details .portfolio-info .filter-buttons
-  {
-    grid-template-columns: repeat(2,1fr);
+@media (max-width:762px) {
+  .portfolio-details .portfolio-info .filter-buttons {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1957,7 +1993,7 @@ section,
 # Service Details Section
 --------------------------------------------------------------*/
 .services-list-container {
-  max-height: 300px; /* Adjust height as needed */
+  max-height: 510px; /* Adjust height as needed */
   overflow-y: auto;
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: #888 #f0f0f0; /* Thumb and track colors */

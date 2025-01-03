@@ -228,160 +228,162 @@
               </div>  
           </div>
 
-            <div class="col-lg-7">
-              <section id="portfolio-details" class="portfolio-details section">
-                <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-                  <h3 style="text-align: center;">Artificial Intelligence and Automation Solutions</h3>
-                  <div class="filter-buttons">
-                    <button onclick="filterDevelopment('Artificial-Intelligence-AI-Applications')" class="development-filter-btn active">Artificial Intelligence (AI) Applications</button>
-                    <button onclick="filterDevelopment('Machine-Learning-ML-Training-Models')" class="development-filter-btn">Machine Learning (ML) Training Models</button>
-                    <button onclick="filterDevelopment('AI-Automation-Orchestration')" class="development-filter-btn">AI Automation Orchestration</button>
-                    <button onclick="filterDevelopment('Robotic-Process-Automation-(RPA)')" class="development-filter-btn">Robotic Process Automation (RPA)</button>
-                    <button onclick="filterDevelopment('Industrial-Robotic-Applications')" class="development-filter-btn">Industrial Robotic Applications</button>
-                    <button onclick="filterDevelopment('Intelligent-Process-Automation')" class="development-filter-btn">Intelligent Process Automation</button>
-                  </div>
+          <div class="col-lg-7">
+            <section id="portfolio-details" class="portfolio-details section">
+              <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                <h3 style="text-align: center;">Artificial Intelligence and Automation Solutions</h3>
+                <div class="filter-buttons">
+                  <button onclick="filterDevelopment('Artificial-Intelligence-AI-Applications')" class="development-filter-btn active">Artificial Intelligence (AI) Applications</button>
+                  <button onclick="filterDevelopment('Machine-Learning-ML-Training-Models')" class="development-filter-btn">Machine Learning (ML) Training Models</button>
+                  <button onclick="filterDevelopment('AI-Automation-Orchestration')" class="development-filter-btn">AI Automation Orchestration</button>
+                  <button onclick="filterDevelopment('Robotic-Process-Automation-(RPA)')" class="development-filter-btn">Robotic Process Automation (RPA)</button>
+                  <button onclick="filterDevelopment('Industrial-Robotic-Applications')" class="development-filter-btn">Industrial Robotic Applications</button>
+                  <button onclick="filterDevelopment('Intelligent-Process-Automation')" class="development-filter-btn">Intelligent Process Automation</button>
                 </div>
-            
-                <!-- Content Section -->
-                <section id="portfolio-details" class="portfolio-details section">
-                  <div id="development-content" class="development-content" style="text-align: justify;">
-                    <!-- Default Content -->
-                    <!-- <h3>Artificial Intelligence (AI) Applications</h3> -->
-                    
-                  </div>
-            
-                  <script>
-                    // Function to update the active class and load content dynamically
-                    function filterDevelopment(type) {
-                      const buttons = document.querySelectorAll('.development-filter-btn');
-                      buttons.forEach(btn => btn.classList.remove('active'));
-                      const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
-                      if (activeButton) {
-                        activeButton.classList.add('active');
-                      }
-            
-                      const content = {
-                        'Artificial-Intelligence-AI-Applications': `
-                          <h3>Artificial Intelligence (AI) Applications</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Unlock the potential of artificial intelligence to transform your business. Our AI applications enable organizations to develop intelligent solutions that drive automation, enhance decision-making, and improve customer engagement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Leveraging AI frameworks like TensorFlow, PyTorch, and Microsoft Cognitive Services, we design and develop customized AI applications that integrate machine learning, natural language processing, and computer vision. Our AI services include chatbot development, image recognition, and predictive analytics.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong>  Kasturi Solutions' AI experts collaborate with your team to identify key business objectives and develop tailored AI solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'Machine-Learning-ML-Training-Models': `
-                          <h3>Machine Learning (ML) Training Models</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Develop accurate and reliable machine learning models with our expertise. Our ML training models enable organizations to build predictive models, classify data, and cluster patterns.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing ML libraries like scikit-learn, Keras, and XGBoost, we design and develop customized ML models that integrate supervised, unsupervised, and reinforcement learning techniques. Our ML services include model training, model evaluation, and hyperparameter tuning.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our ML experts work closely with your team to understand your business objectives and develop tailored ML solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'AI-Automation-Orchestration': `
-                          <h3>AI Automation Orchestration</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Streamline your business processes with our AI automation orchestration services. Our experts help organizations integrate AI, ML, and automation to drive efficiency, reduce costs, and enhance customer experiences.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Leveraging AI automation platforms like Automation Anywhere, Blue Prism, and UiPath, we design and develop customized automation solutions that integrate AI, ML, and RPA. Our AI automation services include process automation, workflow management, and automation governance.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' AI automation experts collaborate with your team to identify key business objectives and develop tailored automation solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'Robotic-Process-Automation-(RPA)': `
-                          <h3>Robotic Process Automation (RPA)</h3>
-                       
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Automate repetitive and mundane tasks with our RPA services. Our experts help organizations develop customized RPA solutions that drive efficiency, reduce costs, and enhance customer experiences.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing RPA tools like Automation Anywhere, Blue Prism, and UiPath, we design and develop customized RPA solutions that integrate workflow management, automation governance, and AI. Our RPA services include process automation, task automation, and automation maintenance.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our RPA experts work closely with your team to understand your business objectives and develop tailored RPA solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        
-                        'Industrial-Robotic-Applications': `
-                          <h3>Industrial Robotic Applications</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Transform your industrial operations with our robotic applications. Our experts help organizations develop customized robotic solutions that drive efficiency, reduce costs, and enhance product quality.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Leveraging industrial robotic platforms like FANUC, KUKA, and ABB, we design and develop customized robotic solutions that integrate machine learning, computer vision, and sensor technologies. Our industrial robotic services include robotic process automation, robotic inspection, and robotic maintenance.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' industrial robotic experts collaborate with your team to identify key business objectives and develop tailored robotic solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'Intelligent-Process-Automation': `
-                          <h3>Intelligent Process Automation</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Unlock the potential of intelligent process automation to transform your business. Our IPA services enable organizations to develop customized solutions that integrate AI, ML, and RPA.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing IPA platforms like Pegasystems, Appian, and IBM Automation, we design and develop customized IPA solutions that integrate workflow management, automation governance, and AI. Our IPA services include process automation, task automation, and automation maintenance.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our IPA experts work closely with your team to understand your business objectives and develop tailored IPA solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions</td>
-                            </tr>
-                          </table>`
-                      };
-            
-                      const developmentContent = document.getElementById('development-content');
-                      developmentContent.style.opacity = 0;
-            
-                      setTimeout(() => {
-                        developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
-                        developmentContent.style.opacity = 1;
-                      }, 300);
+              </div>
+          
+              <!-- Content Section -->
+              <section id="portfolio-details" class="portfolio-details section">
+                <div id="development-content" class="development-content" style="text-align: justify;">
+                  <!-- Default Content -->
+                  <!-- <h3>Artificial Intelligence (AI) Applications</h3> -->
+                  
+                </div>
+          
+                <script>
+                  // Function to update the active class and load content dynamically
+                  function filterDevelopment(type) {
+                    const buttons = document.querySelectorAll('.development-filter-btn');
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
+                    if (activeButton) {
+                      activeButton.classList.add('active');
                     }
-            
-                    window.onload = function() {
-                      filterDevelopment('Artificial-Intelligence-AI-Applications');
+          
+                    const content = {
+                      'Artificial-Intelligence-AI-Applications': `
+                        <h3>Artificial Intelligence (AI) Applications</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Unlock the potential of artificial intelligence to transform your business. Our AI applications enable organizations to develop intelligent solutions that drive automation, enhance decision-making, and improve customer engagement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Leveraging AI frameworks like TensorFlow, PyTorch, and Microsoft Cognitive Services, we design and develop customized AI applications that integrate machine learning, natural language processing, and computer vision. Our AI services include chatbot development, image recognition, and predictive analytics.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong>  Kasturi Solutions' AI experts collaborate with your team to identify key business objectives and develop tailored AI solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'Machine-Learning-ML-Training-Models': `
+                        <h3>Machine Learning (ML) Training Models</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Develop accurate and reliable machine learning models with our expertise. Our ML training models enable organizations to build predictive models, classify data, and cluster patterns.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing ML libraries like scikit-learn, Keras, and XGBoost, we design and develop customized ML models that integrate supervised, unsupervised, and reinforcement learning techniques. Our ML services include model training, model evaluation, and hyperparameter tuning.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our ML experts work closely with your team to understand your business objectives and develop tailored ML solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'AI-Automation-Orchestration': `
+                        <h3>AI Automation Orchestration</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Streamline your business processes with our AI automation orchestration services. Our experts help organizations integrate AI, ML, and automation to drive efficiency, reduce costs, and enhance customer experiences.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Leveraging AI automation platforms like Automation Anywhere, Blue Prism, and UiPath, we design and develop customized automation solutions that integrate AI, ML, and RPA. Our AI automation services include process automation, workflow management, and automation governance.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' AI automation experts collaborate with your team to identify key business objectives and develop tailored automation solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+
+                      'Robotic-Process-Automation-(RPA)': `
+                        <h3>Robotic Process Automation (RPA)</h3>
+                      
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Automate repetitive and mundane tasks with our RPA services. Our experts help organizations develop customized RPA solutions that drive efficiency, reduce costs, and enhance customer experiences.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing RPA tools like Automation Anywhere, Blue Prism, and UiPath, we design and develop customized RPA solutions that integrate workflow management, automation governance, and AI. Our RPA services include process automation, task automation, and automation maintenance.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our RPA experts work closely with your team to understand your business objectives and develop tailored RPA solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      
+                      'Industrial-Robotic-Applications': `
+                        <h3>Industrial Robotic Applications</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Transform your industrial operations with our robotic applications. Our experts help organizations develop customized robotic solutions that drive efficiency, reduce costs, and enhance product quality.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Leveraging industrial robotic platforms like FANUC, KUKA, and ABB, we design and develop customized robotic solutions that integrate machine learning, computer vision, and sensor technologies. Our industrial robotic services include robotic process automation, robotic inspection, and robotic maintenance.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' industrial robotic experts collaborate with your team to identify key business objectives and develop tailored robotic solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+
+                      'Intelligent-Process-Automation': `
+                        <h3>Intelligent Process Automation</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Unlock the potential of intelligent process automation to transform your business. Our IPA services enable organizations to develop customized solutions that integrate AI, ML, and RPA.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing IPA platforms like Pegasystems, Appian, and IBM Automation, we design and develop customized IPA solutions that integrate workflow management, automation governance, and AI. Our IPA services include process automation, task automation, and automation maintenance.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our IPA experts work closely with your team to understand your business objectives and develop tailored IPA solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions</td>
+                          </tr>
+                        </table>`
                     };
-                  </script>
-                </section>
+          
+                    const developmentContent = document.getElementById('development-content');
+                    developmentContent.style.opacity = 0;
+          
+                    setTimeout(() => {
+                      developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
+                      developmentContent.style.opacity = 1;
+                    }, 300);
+                  }
+          
+                  window.onload = function() {
+                    filterDevelopment('Artificial-Intelligence-AI-Applications');
+                  };
+                </script>
               </section>
-            </div>
-            
+            </section>
+          </div>
+
+          
+          
 
         </div>
 
