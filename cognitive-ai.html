@@ -139,13 +139,11 @@
     </div><!-- End Page Title -->
 
     <!-- Portfolio Details Section -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <section id="service-details" class="service-details section"> 
+        <div class="row gy-1">
           <div class="col-lg-5">
             <!-- Services list code here -->
-            <section id="service-details" class="service-details section">
               <div class="service-box"> 
                 <h4>Services List</h4>
                 <div class="services-list-container">
@@ -174,16 +172,172 @@
                   </div>
                 </div><!-- End Services List -->
               </div>
-              <script src="assets/js/service-details-scroll.js"></script>
+          </div>
+
+          <div class="col-lg-7">
+            <section id="portfolio-details" class="portfolio-details section">
+              <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                <h3 style="text-align: center;">Cognitive AI and NLP Solutions</h3>
+                <div class="filter-buttons">
+                  <button onclick="filterDevelopment('Cognitive-AI-Solutions')" class="development-filter-btn active">Cognitive AI Solutions</button>
+                  <button onclick="filterDevelopment('Computer-Vision-Solutions')" class="development-filter-btn">Computer Vision Solutions</button>
+                  <button onclick="filterDevelopment('Speech-Recognition-Solutions')" class="development-filter-btn">Speech Recognition Solutions</button>
+                  <button onclick="filterDevelopment('Natural-Language-Processing-(NLP)')" class="development-filter-btn">Natural Language Processing (NLP)</button>
+                  <button onclick="filterDevelopment('Natural-Language-Understanding-(NLU)')" class="development-filter-btn">Natural-Language-Understanding(NLU)</button>
+                  <button onclick="filterDevelopment('Generative-AI-Solutions')" class="development-filter-btn">Generative AI Solutions</button>
+                </div>
+              </div>
+          
+              <!-- Content Section -->
+                <div id="development-content" class="development-content" style="text-align: justify;">
+                  <!-- Default Content -->
+                </div>          
+                <script>
+                  // Function to update the active class and load content dynamically
+                  function filterDevelopment(type) {
+                    const buttons = document.querySelectorAll('.development-filter-btn');
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
+                    if (activeButton) {
+                      activeButton.classList.add('active');
+                    }
+          
+                    const content = {
+                      'Cognitive-AI-Solutions': `
+                        <h3>Cognitive AI Solutions</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Develop intelligent systems that can think, learn, and interact like humans with our cognitive AI solutions. Our experts help organizations integrate cognitive AI into their business processes to drive innovation, efficiency, and customer engagement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Leveraging cognitive AI frameworks like IBM Watson, Microsoft Cognitive Services, and Google Cloud AI Platform, we design and develop customized cognitive AI solutions that integrate machine learning, natural language processing, and computer vision. Our cognitive AI services include cognitive computing, expert systems, and decision management.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong>  Kasturi Solutions' cognitive AI experts collaborate with your team to identify key business objectives and develop tailored cognitive AI solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'Computer-Vision-Solutions': `
+                        <h3>Computer Vision Solutions</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Unlock the power of computer vision to transform your business. Our computer vision solutions enable organizations to develop intelligent systems that can see, interpret, and understand visual data.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing computer vision frameworks like OpenCV, TensorFlow, and PyTorch, we design and develop customized computer vision solutions that integrate image processing, object detection, and machine learning. Our computer vision services include image recognition, object detection, and facial recognition.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our computer vision experts work closely with your team to understand your business objectives and develop tailored computer vision solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'Speech-Recognition-Solutions': `
+                        <h3>Speech Recognition Solutions</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Develop intelligent systems that can hear and understand human speech with our speech recognition solutions. Our experts help organizations integrate speech recognition into their business processes to drive innovation, efficiency, and customer engagement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Leveraging speech recognition frameworks like Google Cloud Speech-to-Text, Microsoft Azure Speech Services, and IBM Watson Speech to Text, we design and develop customized speech recognition solutions that integrate speech-to-text, text-to-speech, and natural language processing. Our speech recognition services include voice recognition, speech transcription, and voice biometrics.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' speech recognition experts collaborate with your team to identify key business objectives and develop tailored speech recognition solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                      'Natural-Language-Processing-(NLP)': `
+                        <h3>Natural Language Processing (NLP)</h3>
+                     
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Unlock the power of natural language processing to transform your business. Our NLP solutions enable organizations to develop intelligent systems that can understand, interpret, and generate human language.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing NLP frameworks like NLTK, spaCy, and Stanford CoreNLP, we design and develop customized NLP solutions that integrate text processing, sentiment analysis, and machine learning. Our NLP services include text classification, named entity recognition, and language translation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our NLP experts work closely with your team to understand your business objectives and develop tailored NLP solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      
+                      'Natural-Language-Understanding-(NLU)': `
+                        <h3>Natural Language Understanding (NLU)</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Develop intelligent systems that can understand the meaning and context of human language with our NLU solutions. Our experts help organizations integrate NLU into their business processes to drive innovation, efficiency, and customer engagement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Leveraging NLU frameworks like IBM Watson Natural Language Understanding, Microsoft Azure Cognitive Services, and Google Cloud Natural Language, we design and develop customized NLU solutions that integrate entity recognition, sentiment analysis, and intent identification. Our NLU services include text analysis, language understanding, and conversational AI.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' NLU experts collaborate with your team to identify key business objectives and develop tailored NLU solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                      'Generative-AI-Solutions': `
+                        <h3>Generative AI Solutions</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Unlock the potential of generative AI to transform your business. Our generative AI solutions enable organizations to develop intelligent systems that can generate new content, such as text, images, and videos.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing generative AI frameworks like Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Transformers, we design and develop customized generative AI solutions that integrate machine learning, deep learning, and natural language processing. Our generative AI services include text generation, image generation, and video generation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our generative AI experts work closely with your team to understand your business objectives and develop tailored generative AI solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support.</td>
+                          </tr>
+                        </table>`
+                    };
+          
+                    const developmentContent = document.getElementById('development-content');
+                    developmentContent.style.opacity = 0;
+          
+                    setTimeout(() => {
+                      developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
+                      developmentContent.style.opacity = 1;
+                      developmentContent.scrollIntoView({behavior:"smooth",block:"end"});
+                    }, 300);
+                  }
+          
+                  window.onload = function() {
+                    filterDevelopment('Cognitive-AI-Solutions');
+                  };
+                </script>
               
-              <div class="service-box">
+            </section>
+          </div>   
+        </div>
+      
+        <div class="row gy-1">
+          <div class="col-lg-5">
+              <div class="service-box" data-aos="fade-up" data-aos-delay="200">
                 <h4>Download Catalog</h4>
                 <div class="download-catalog">
                   <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
                   <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
                 </div>
-              </div><!-- End Services List -->
-
+              </div>
+            <!-- Download Catalog -->
+          </div>
+          <div class="col-lg-7">
               <div class="service-box" data-aos="fade-up" data-aos-delay="400">
                 <h4>Ready to Secure Your Business?</h4>
                 <p>Contact us today to learn how Kasturi Solutions can help you.</p>
@@ -224,169 +378,12 @@
                     Get in Touch
                   </a>
                 </div>              
-              </div>  
+              </div> 
           </div>
-
-            <div class="col-lg-7">
-              <section id="portfolio-details" class="portfolio-details section">
-                <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-                  <h3 style="text-align: center;">Cognitive AI and NLP Solutions</h3>
-                  <div class="filter-buttons">
-                    <button onclick="filterDevelopment('Cognitive-AI-Solutions')" class="development-filter-btn active">Cognitive AI Solutions</button>
-                    <button onclick="filterDevelopment('Computer-Vision-Solutions')" class="development-filter-btn">Computer Vision Solutions</button>
-                    <button onclick="filterDevelopment('Speech-Recognition-Solutions')" class="development-filter-btn">Speech Recognition Solutions</button>
-                    <button onclick="filterDevelopment('Natural-Language-Processing-(NLP)')" class="development-filter-btn">Natural Language Processing (NLP)</button>
-                    <button onclick="filterDevelopment('Natural-Language-Understanding-(NLU)')" class="development-filter-btn">Natural-Language-Understanding-(NLU)</button>
-                    <button onclick="filterDevelopment('Generative-AI-Solutions')" class="development-filter-btn">Generative AI Solutions</button>
-                  </div>
-                </div>
-            
-                <!-- Content Section -->
-                <section id="portfolio-details" class="portfolio-details section">
-                  <div id="development-content" class="development-content" style="text-align: justify;">
-                    <!-- Default Content -->
-                    
-                    
-                  </div>
-            
-                  <script>
-                    // Function to update the active class and load content dynamically
-                    function filterDevelopment(type) {
-                      const buttons = document.querySelectorAll('.development-filter-btn');
-                      buttons.forEach(btn => btn.classList.remove('active'));
-                      const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
-                      if (activeButton) {
-                        activeButton.classList.add('active');
-                      }
-            
-                      const content = {
-                        'Cognitive-AI-Solutions': `
-                          <h3>Cognitive AI Solutions</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Develop intelligent systems that can think, learn, and interact like humans with our cognitive AI solutions. Our experts help organizations integrate cognitive AI into their business processes to drive innovation, efficiency, and customer engagement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Leveraging cognitive AI frameworks like IBM Watson, Microsoft Cognitive Services, and Google Cloud AI Platform, we design and develop customized cognitive AI solutions that integrate machine learning, natural language processing, and computer vision. Our cognitive AI services include cognitive computing, expert systems, and decision management.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong>  Kasturi Solutions' cognitive AI experts collaborate with your team to identify key business objectives and develop tailored cognitive AI solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'Computer-Vision-Solutions': `
-                          <h3>Computer Vision Solutions</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Unlock the power of computer vision to transform your business. Our computer vision solutions enable organizations to develop intelligent systems that can see, interpret, and understand visual data.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing computer vision frameworks like OpenCV, TensorFlow, and PyTorch, we design and develop customized computer vision solutions that integrate image processing, object detection, and machine learning. Our computer vision services include image recognition, object detection, and facial recognition.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our computer vision experts work closely with your team to understand your business objectives and develop tailored computer vision solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'Speech-Recognition-Solutions': `
-                          <h3>Speech Recognition Solutions</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Develop intelligent systems that can hear and understand human speech with our speech recognition solutions. Our experts help organizations integrate speech recognition into their business processes to drive innovation, efficiency, and customer engagement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Leveraging speech recognition frameworks like Google Cloud Speech-to-Text, Microsoft Azure Speech Services, and IBM Watson Speech to Text, we design and develop customized speech recognition solutions that integrate speech-to-text, text-to-speech, and natural language processing. Our speech recognition services include voice recognition, speech transcription, and voice biometrics.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' speech recognition experts collaborate with your team to identify key business objectives and develop tailored speech recognition solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'Natural-Language-Processing-(NLP)': `
-                          <h3>Natural Language Processing (NLP)</h3>
-                       
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Unlock the power of natural language processing to transform your business. Our NLP solutions enable organizations to develop intelligent systems that can understand, interpret, and generate human language.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing NLP frameworks like NLTK, spaCy, and Stanford CoreNLP, we design and develop customized NLP solutions that integrate text processing, sentiment analysis, and machine learning. Our NLP services include text classification, named entity recognition, and language translation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our NLP experts work closely with your team to understand your business objectives and develop tailored NLP solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        
-                        'Natural-Language-Understanding-(NLU)': `
-                          <h3>Natural Language Understanding (NLU)</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Develop intelligent systems that can understand the meaning and context of human language with our NLU solutions. Our experts help organizations integrate NLU into their business processes to drive innovation, efficiency, and customer engagement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Leveraging NLU frameworks like IBM Watson Natural Language Understanding, Microsoft Azure Cognitive Services, and Google Cloud Natural Language, we design and develop customized NLU solutions that integrate entity recognition, sentiment analysis, and intent identification. Our NLU services include text analysis, language understanding, and conversational AI.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' NLU experts collaborate with your team to identify key business objectives and develop tailored NLU solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'Generative-AI-Solutions': `
-                          <h3>Generative AI Solutions</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Unlock the potential of generative AI to transform your business. Our generative AI solutions enable organizations to develop intelligent systems that can generate new content, such as text, images, and videos.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing generative AI frameworks like Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Transformers, we design and develop customized generative AI solutions that integrate machine learning, deep learning, and natural language processing. Our generative AI services include text generation, image generation, and video generation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our generative AI experts work closely with your team to understand your business objectives and develop tailored generative AI solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support.</td>
-                            </tr>
-                          </table>`
-                      };
-            
-                      const developmentContent = document.getElementById('development-content');
-                      developmentContent.style.opacity = 0;
-            
-                      setTimeout(() => {
-                        developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
-                        developmentContent.style.opacity = 1;
-                      }, 300);
-                    }
-            
-                    window.onload = function() {
-                      filterDevelopment('Cognitive-AI-Solutions');
-                    };
-                  </script>
-                </section>
-              </section>
-            </div>
-            
-
         </div>
-
-      </div>
-
-    </section><!-- /Portfolio Details Section -->
+      </section>      
+    </div>
+    <!-- /Portfolio Details Section -->
 
   </main>
 
@@ -481,6 +478,7 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/js/service-details-scroll.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

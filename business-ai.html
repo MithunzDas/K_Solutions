@@ -139,16 +139,14 @@
     </div><!-- End Page Title -->
 
     <!-- Portfolio Details Section -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <section id="service-details" class="service-details section"> 
+        <div class="row gy-1">
           <div class="col-lg-5">
             <!-- Services list code here -->
-            <section id="service-details" class="service-details section">
               <div class="service-box"> 
                 <h4>Services List</h4>
-                <div class="services-list-container">
+                <div class="services-list-container" style="max-height: 650px">
                   <div class="services-list">
                     <a href="analytics-data-insights.html"><i class="bi bi-arrow-right-circle"></i><span>Analytics and Data Insights Solutions</span></a>
                     <a href="ai-automation.html"><i class="bi bi-arrow-right-circle"></i><span>Artificial Intelligence and Automation Solutions</span></a>
@@ -174,16 +172,190 @@
                   </div>
                 </div><!-- End Services List -->
               </div>
-              <script src="assets/js/service-details-scroll.js"></script>
-              
-              <div class="service-box">
+          </div>
+
+          <div class="col-lg-7">
+            <section id="portfolio-details" class="portfolio-details section">
+              <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                <h3 style="text-align: center;">Applied AI and Business Solutions</h3>
+                <div class="filter-buttons">
+                  <button onclick="filterDevelopment('AI-Business-Accelerators')" class="development-filter-btn active">AI Business Accelerators</button>
+                  <button onclick="filterDevelopment('Human-Computer-Interaction-(HCI)')" class="development-filter-btn">Human-Computer Interaction (HCI)</button>
+                  <button onclick="filterDevelopment('Expert-Systems')" class="development-filter-btn">Expert Systems</button>
+                  <button onclick="filterDevelopment('Knowledge-Representation-and-Reasoning-(KRR)')" class="development-filter-btn">Knowledge Representation and Reasoning (KRR)</button>
+                  <button onclick="filterDevelopment('Intelligent-Decisioning')" class="development-filter-btn">Intelligent Decisioning</button>
+                  <button onclick="filterDevelopment('AI-Risk-and-Bias-Mitigation-Solutions')" class="development-filter-btn">AI Risk and Bias Mitigation Solutions</button>
+                  <button onclick="filterDevelopment('AI-Ethics-and-Compliance-Solutions')" class="development-filter-btn">AI Ethics and Compliance Solutions</button>
+                </div>
+              </div>
+          
+              <!-- Content Section -->
+                <div id="development-content" class="development-content" style="text-align: justify;">
+                  <!-- Default Content --->
+                </div>
+                <script>
+                  // Function to update the active class and load content dynamically
+                  function filterDevelopment(type) {
+                    const buttons = document.querySelectorAll('.development-filter-btn');
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
+                    if (activeButton) {
+                      activeButton.classList.add('active');
+                    }
+          
+                    const content = {
+                      'AI-Business-Accelerators': `
+                        <h3>AI Business Accelerators</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Accelerate your business transformation with our AI business accelerators. Our experts help organizations develop customized AI solutions that drive innovation, efficiency, and customer engagement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Leveraging AI frameworks like Microsoft Azure, Google Cloud AI Platform, and IBM Watson, we design and develop customized AI business accelerators that integrate machine learning, natural language processing, and computer vision. Our AI business accelerator services include AI strategy development, AI solution design, and AI implementation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong>  Kasturi Solutions' AI experts collaborate with your team to identify key business objectives and develop tailored AI business accelerators that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'Human-Computer-Interaction-(HCI)': `
+                        <h3>Human-Computer Interaction (HCI)</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Develop intelligent systems that can interact with humans in a natural and intuitive way with our HCI solutions. Our experts help organizations design and develop customized HCI solutions that drive user engagement and adoption.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing HCI frameworks like design thinking, user-centered design, and human factors engineering, we design and develop customized HCI solutions that integrate user experience (UX) design, user interface (UI) design, and accessibility. Our HCI services include user research, usability testing, and interaction design.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our HCI experts work closely with your team to understand your business objectives and develop tailored HCI solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'Expert-Systems': `
+                        <h3>Expert Systems</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Develop intelligent systems that can hear and understand human speech with our speech recognition solutions. Our experts help organizations integrate speech recognition into their business processes to drive innovation, efficiency, and customer engagement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Leveraging expert system frameworks like rule-based systems, decision trees, and neural networks, we design and develop customized expert systems that integrate knowledge representation, reasoning, and inference. Our expert system services include knowledge acquisition, knowledge representation, and system implementation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' expert system experts collaborate with your team to identify key business objectives and develop tailored expert systems that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                      'Knowledge-Representation-and-Reasoning-(KRR)': `
+                        <h3>Knowledge Representation and Reasoning (KRR)</h3>
+                     
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Develop intelligent systems that can represent and reason about knowledge with our KRR solutions. Our experts help organizations design and develop customized KRR solutions that drive decision-making and problem-solving.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing KRR frameworks like ontologies, semantic networks, and logic-based systems, we design and develop customized KRR solutions that integrate knowledge representation, reasoning, and inference. Our KRR services include knowledge representation, reasoning, and system implementation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our KRR experts work closely with your team to understand your business objectives and develop tailored KRR solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      
+                      'Intelligent-Decisioning': `
+                        <h3>Intelligent Decisioning</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Develop intelligent systems that can make decisions autonomously with our intelligent decisioning solutions. Our experts help organizations design and develop customized intelligent decisioning solutions that drive business efficiency and innovation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Leveraging intelligent decisioning frameworks like business rules management systems (BRMS), decision management systems (DMS), and machine learning, we design and develop customized intelligent decisioning solutions that integrate data analytics, business rules, and decision logic. Our intelligent decisioning services include decision analysis, decision design, and system implementation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' intelligent decisioning experts collaborate with your team to identify key business objectives and develop tailored intelligent decisioning solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                      'AI-Risk-and-Bias-Mitigation-Solutions': `
+                        <h3>AI Risk and Bias Mitigation Solutions</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Mitigate the risks and biases associated with AI systems with our AI risk and bias mitigation solutions. Our experts help organizations develop customized solutions that ensure fairness, transparency, and accountability in AI decision-making.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing AI risk and bias mitigation frameworks like fairness metrics, bias detection, and explainability techniques, we design and develop customized solutions that integrate data analytics, machine learning, and decision logic. Our AI risk and bias mitigation services include risk assessment, bias detection, and mitigation strategy development.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our AI risk and bias mitigation experts work closely with your team to understand your business objectives and develop tailored solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                        'AI-Ethics-and-Compliance-Solutions': `
+                        <h3>AI Ethics and Compliance Solutions</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Ensure that your AI systems comply with ethical and regulatory requirements with our AI ethics and compliance solutions. Our experts help organizations develop customized solutions that ensure transparency, accountability, and fairness in AI decision-making.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing AI ethics and compliance frameworks like data protection regulations (GDPR, CCPA), AI ethics guidelines, and industry standards, we design and develop customized solutions that integrate data governance, model risk management, and compliance monitoring. Our AI ethics and compliance services include regulatory compliance, ethics assessments, and compliance monitoring.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' AI ethics and compliance experts collaborate with your team to identify key business objectives and develop tailored solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`
+                    };
+          
+                    const developmentContent = document.getElementById('development-content');
+                    developmentContent.style.opacity = 0;
+          
+                    setTimeout(() => {
+                      developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
+                      developmentContent.style.opacity = 1;
+                      developmentContent.scrollIntoView({behavior:"smooth",block:"end"});
+                    }, 300);
+                  }
+          
+                  window.onload = function() {
+                    filterDevelopment('AI-Business-Accelerators');
+                  };
+                </script>
+            </section>
+          </div>   
+        </div>
+      
+        <div class="row gy-1">
+          <div class="col-lg-5">
+              <div class="service-box" data-aos="fade-up" data-aos-delay="200">
                 <h4>Download Catalog</h4>
                 <div class="download-catalog">
                   <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
                   <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
                 </div>
-              </div><!-- End Services List -->
-
+              </div>
+            <!-- Download Catalog -->
+          </div>
+          <div class="col-lg-7">
               <div class="service-box" data-aos="fade-up" data-aos-delay="400">
                 <h4>Ready to Secure Your Business?</h4>
                 <p>Contact us today to learn how Kasturi Solutions can help you.</p>
@@ -224,188 +396,13 @@
                     Get in Touch
                   </a>
                 </div>              
-              </div>  
+              </div> 
           </div>
-
-            <div class="col-lg-7">
-              <section id="portfolio-details" class="portfolio-details section">
-                <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-                  <h3 style="text-align: center;">Applied AI and Business Solutions</h3>
-                  <div class="filter-buttons">
-                    <button onclick="filterDevelopment('AI-Business-Accelerators')" class="development-filter-btn active">AI Business Accelerators</button>
-                    <button onclick="filterDevelopment('Human-Computer-Interaction-(HCI)')" class="development-filter-btn">Human-Computer Interaction (HCI)</button>
-                    <button onclick="filterDevelopment('Expert-Systems')" class="development-filter-btn">Expert Systems</button>
-                    <button onclick="filterDevelopment('Knowledge-Representation-and-Reasoning-(KRR)')" class="development-filter-btn">Knowledge Representation and Reasoning (KRR)</button>
-                    <button onclick="filterDevelopment('Intelligent-Decisioning')" class="development-filter-btn">Intelligent Decisioning</button>
-                    <button onclick="filterDevelopment('AI-Risk-and-Bias-Mitigation-Solutions')" class="development-filter-btn">AI Risk and Bias Mitigation Solutions</button>
-                    <button onclick="filterDevelopment('AI-Ethics-and-Compliance-Solutions')" class="development-filter-btn">AI Ethics and Compliance Solutions</button>
-                  </div>
-                </div>
-            
-                <!-- Content Section -->
-                <section id="portfolio-details" class="portfolio-details section">
-                  <div id="development-content" class="development-content" style="text-align: justify;">
-                    <!-- Default Content -->
-                    
-                    
-                  </div>
-            
-                  <script>
-                    // Function to update the active class and load content dynamically
-                    function filterDevelopment(type) {
-                      const buttons = document.querySelectorAll('.development-filter-btn');
-                      buttons.forEach(btn => btn.classList.remove('active'));
-                      const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
-                      if (activeButton) {
-                        activeButton.classList.add('active');
-                      }
-            
-                      const content = {
-                        'AI-Business-Accelerators': `
-                          <h3>AI Business Accelerators</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Accelerate your business transformation with our AI business accelerators. Our experts help organizations develop customized AI solutions that drive innovation, efficiency, and customer engagement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Leveraging AI frameworks like Microsoft Azure, Google Cloud AI Platform, and IBM Watson, we design and develop customized AI business accelerators that integrate machine learning, natural language processing, and computer vision. Our AI business accelerator services include AI strategy development, AI solution design, and AI implementation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong>  Kasturi Solutions' AI experts collaborate with your team to identify key business objectives and develop tailored AI business accelerators that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'Human-Computer-Interaction-(HCI)': `
-                          <h3>Human-Computer Interaction (HCI)</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Develop intelligent systems that can interact with humans in a natural and intuitive way with our HCI solutions. Our experts help organizations design and develop customized HCI solutions that drive user engagement and adoption.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing HCI frameworks like design thinking, user-centered design, and human factors engineering, we design and develop customized HCI solutions that integrate user experience (UX) design, user interface (UI) design, and accessibility. Our HCI services include user research, usability testing, and interaction design.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our HCI experts work closely with your team to understand your business objectives and develop tailored HCI solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'Expert-Systems': `
-                          <h3>Expert Systems</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Develop intelligent systems that can hear and understand human speech with our speech recognition solutions. Our experts help organizations integrate speech recognition into their business processes to drive innovation, efficiency, and customer engagement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Leveraging expert system frameworks like rule-based systems, decision trees, and neural networks, we design and develop customized expert systems that integrate knowledge representation, reasoning, and inference. Our expert system services include knowledge acquisition, knowledge representation, and system implementation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' expert system experts collaborate with your team to identify key business objectives and develop tailored expert systems that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'Knowledge-Representation-and-Reasoning-(KRR)': `
-                          <h3>Knowledge Representation and Reasoning (KRR)</h3>
-                       
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Develop intelligent systems that can represent and reason about knowledge with our KRR solutions. Our experts help organizations design and develop customized KRR solutions that drive decision-making and problem-solving.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing KRR frameworks like ontologies, semantic networks, and logic-based systems, we design and develop customized KRR solutions that integrate knowledge representation, reasoning, and inference. Our KRR services include knowledge representation, reasoning, and system implementation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our KRR experts work closely with your team to understand your business objectives and develop tailored KRR solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        
-                        'Intelligent-Decisioning': `
-                          <h3>Intelligent Decisioning</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Develop intelligent systems that can make decisions autonomously with our intelligent decisioning solutions. Our experts help organizations design and develop customized intelligent decisioning solutions that drive business efficiency and innovation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Leveraging intelligent decisioning frameworks like business rules management systems (BRMS), decision management systems (DMS), and machine learning, we design and develop customized intelligent decisioning solutions that integrate data analytics, business rules, and decision logic. Our intelligent decisioning services include decision analysis, decision design, and system implementation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' intelligent decisioning experts collaborate with your team to identify key business objectives and develop tailored intelligent decisioning solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'AI-Risk-and-Bias-Mitigation-Solutions': `
-                          <h3>AI Risk and Bias Mitigation Solutions</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Mitigate the risks and biases associated with AI systems with our AI risk and bias mitigation solutions. Our experts help organizations develop customized solutions that ensure fairness, transparency, and accountability in AI decision-making.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing AI risk and bias mitigation frameworks like fairness metrics, bias detection, and explainability techniques, we design and develop customized solutions that integrate data analytics, machine learning, and decision logic. Our AI risk and bias mitigation services include risk assessment, bias detection, and mitigation strategy development.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our AI risk and bias mitigation experts work closely with your team to understand your business objectives and develop tailored solutions that meet your needs. We ensure seamless integration with your existing systems and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                          'AI-Ethics-and-Compliance-Solutions': `
-                          <h3>AI Ethics and Compliance Solutions</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Ensure that your AI systems comply with ethical and regulatory requirements with our AI ethics and compliance solutions. Our experts help organizations develop customized solutions that ensure transparency, accountability, and fairness in AI decision-making.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing AI ethics and compliance frameworks like data protection regulations (GDPR, CCPA), AI ethics guidelines, and industry standards, we design and develop customized solutions that integrate data governance, model risk management, and compliance monitoring. Our AI ethics and compliance services include regulatory compliance, ethics assessments, and compliance monitoring.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' AI ethics and compliance experts collaborate with your team to identify key business objectives and develop tailored solutions that address your specific needs. We ensure seamless integration with your existing infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`
-                      };
-            
-                      const developmentContent = document.getElementById('development-content');
-                      developmentContent.style.opacity = 0;
-            
-                      setTimeout(() => {
-                        developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
-                        developmentContent.style.opacity = 1;
-                      }, 300);
-                    }
-            
-                    window.onload = function() {
-                      filterDevelopment('AI-Business-Accelerators');
-                    };
-                  </script>
-                </section>
-              </section>
-            </div>
-            
-
         </div>
+      </section>      
+    </div>
 
-      </div>
-
-    </section><!-- /Portfolio Details Section -->
+    <!-- /Portfolio Details Section -->
 
   </main>
 
@@ -500,6 +497,7 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/js/service-details-scroll.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
