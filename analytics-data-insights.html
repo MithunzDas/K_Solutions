@@ -314,7 +314,7 @@
                       setTimeout(() => {
                         developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
                         developmentContent.style.opacity = 1;
-                        developmentContent.scrollIntoView({ behavior: 'smooth', block:"end" });
+                        developmentContent.scrollIntoView({ behavior: 'smooth', block:"nearest" });
                       }, 300);
                     }
             
