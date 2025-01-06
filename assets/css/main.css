@@ -2303,7 +2303,7 @@ section,
 .development-filter-btn.active {
   color: var(--accent-color);
   background-color: var(--background-color);
-  border: 1px solid #444444;
+  border: 2px solid#25A012;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
