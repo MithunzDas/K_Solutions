@@ -194,8 +194,10 @@
                     <h3>Data Analytics and Reports</h3>                    
                   </div>            
                   <script>
+                    let filterButtonClicked= false; // Track Whether a filter button has been clicked
+
                     // Function to update the active class and load content dynamically
-                    function filterDevelopment(type) {
+                    function filterDevelopment(type,isInitialLoad=false) {
                       const buttons = document.querySelectorAll('.development-filter-btn');
                       buttons.forEach(btn => btn.classList.remove('active'));
                       const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
@@ -314,13 +316,24 @@
                       setTimeout(() => {
                         developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
                         developmentContent.style.opacity = 1;
-                        developmentContent.scrollIntoView({ behavior: 'smooth', block:"nearest" });
+                        if(!isInitialLoad && filterButtonClicked){
+                          developmentContent.scrollIntoView({ behavior: 'smooth', block:"nearest" });
+                        }
                       }, 300);
                     }
             
                     window.onload = function() {
-                      filterDevelopment('Data-Analytics-and-Reports');
+                      filterDevelopment('Data-Analytics-and-Reports',true);
                     };
+                    // Attach click event listeners to filter buttons
+                    document.addEventListener('DOMContentLoaded', () => {
+                      const buttons = document.querySelectorAll('.development-filter-btn');
+                      buttons.forEach(button => {
+                        button.addEventListener('click', () => {
+                          filterButtonClicked = true; // Mark that a button was clicked
+                        });
+                      });
+                    });
                   </script>                
               </section>
             </div>    
