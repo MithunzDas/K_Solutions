@@ -141,15 +141,14 @@
 
     <!-- Portfolio Details Section -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <section id="service-details" class="service-details section"> 
+        <div class="row gy-1">
           <div class="col-lg-5">
             <!-- Services list code here -->
-            <section id="service-details" class="service-details section">
               <div class="service-box"> 
                 <h4>Services List</h4>
-                <div class="services-list-container">
+                <div class="services-list-container" style="max-height:620px;">
                   <div class="services-list">
                     <a href="analytics-data-insights.html"><i class="bi bi-arrow-right-circle"></i><span>Analytics and Data Insights Solutions</span></a>
                     <a href="ai-automation.html"><i class="bi bi-arrow-right-circle"></i><span>Artificial Intelligence and Automation Solutions</span></a>
@@ -176,24 +175,227 @@
                 </div><!-- End Services List -->
               </div>
               <script src="assets/js/service-details-scroll.js"></script>
-              
-              <div class="service-box">
-                <h4>Download Catalog</h4>
-                <div class="download-catalog">
-                  <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
-                  <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
+              <!-- End Services List -->  
+          </div>
+          <div class="col-lg-7">
+            <section id="portfolio-details" class="portfolio-details section">
+              <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                <h3 style="text-align: center;">Software Quality Testing and Assurance</h3>
+                <div class="filter-buttons">
+                  <button onclick="filterDevelopment('Organizational-CMMI-Quality-Assurance')" class="development-filter-btn active">Organizational CMMI Quality Assurance</button>
+                  <button onclick="filterDevelopment('Software-Manual-Testing-Services')" class="development-filter-btn">Software Manual Testing Services</button>
+                  <button onclick="filterDevelopment('Software-Automated-Testing-Services')" class="development-filter-btn">Software Automated Testing Services</button>
+                  <button onclick="filterDevelopment('Software-Performance-Testing')" class="development-filter-btn">Software Performance Testing</button>
+                  <button onclick="filterDevelopment('Software-Security-Testing')" class="development-filter-btn">Software Security Testing</button>
+                  <button onclick="filterDevelopment('Software-Quality-Assurance-(QA)')" class="development-filter-btn">Software Quality Assurance (QA)</button>
+                  <button onclick="filterDevelopment('Software-Engineering-Process-Group-(SEPG)-Improvement')" class="development-filter-btn active">Software Engineering Process(SEPG) Improvement</button>
                 </div>
-              </div><!-- End Services List -->
+              </div>
+          
+              <!-- Content Section -->
+                <div id="development-content" class="development-content" style="text-align: justify;">
+                  <!-- Default Content -->
+                </div>
+          
+                <script>
+                  let filterButtonClicked=false;
+                  // Function to update the active class and load content dynamically
+                  function filterDevelopment(type,isInitialLoad=false) {
+                    const buttons = document.querySelectorAll('.development-filter-btn');
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
+                    if (activeButton) {
+                      activeButton.classList.add('active');
+                    }
+          
+                    const content = {
+                      'Organizational-CMMI-Quality-Assurance': `
+                        <h3>Organizational CMMI Quality Assurance</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Improve the maturity of your software development processes with our CMMI quality assurance services. Our experts help organizations assess, improve, and maintain their CMMI maturity levels.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing CMMI frameworks and appraisal methods, we provide customized CMMI quality assurance services that integrate process assessment, process improvement, and process maintenance. Our CMMI quality assurance services include CMMI appraisal, process improvement planning, and process implementation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong>  Kasturi Solutions' CMMI quality assurance experts collaborate with your team to identify key process improvement areas and develop tailored CMMI quality assurance solutions that address your specific needs. We ensure seamless integration with your existing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'Software-Engineering-Process-Group-(SEPG)-Improvement': `
+                        <h3>Software Engineering Process(SEPG) Improvement</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Improve the effectiveness of your software engineering processes with our SEPG improvement services. Our experts help organizations assess, improve, and maintain their software engineering processes.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing SEPG frameworks and process improvement methods, we provide customized SEPG improvement services that integrate process assessment, process improvement, and process maintenance. Our SEPG improvement services include process assessment, process improvement planning, and process implementation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our SEPG improvement experts work closely with your team to understand your process improvement objectives and develop tailored SEPG improvement solutions that meet your needs. We ensure seamless integration with your existing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'Software-Manual-Testing-Services': `
+                        <h3>Software Manual Testing Services</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Ensure the quality and reliability of your software applications with our manual testing services. Our experts help organizations develop customized manual testing solutions that meet their unique business needs.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong>Utilizing manual testing frameworks and methodologies, we provide customized manual testing services that integrate test planning, test execution, and test reporting. Our manual testing services include test case development, test execution, and defect reporting.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong>Kasturi Solutions' manual testing experts collaborate with your team to identify key testing objectives and develop tailored manual testing solutions that address your specific needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                      'Software-Automated-Testing-Services': `
+                        <h3>Software Automated Testing Services</h3>
+                     
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Improve the efficiency and effectiveness of your software testing with our automated testing services. Our experts help organizations develop customized automated testing solutions that meet their unique business needs.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong>Utilizing automated testing frameworks and tools like Selenium, Appium, and TestComplete, we provide customized automated testing services that integrate test planning, test execution, and test reporting. Our automated testing services include test automation framework development, test script development, and test execution.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong>At Kasturi Solutions, our automated testing experts work closely with your team to understand your testing objectives and develop tailored automated testing solutions that meet your needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      
+                      'Software-Performance-Testing': `
+                        <h3>Software Performance Testing</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong>Ensure the performance and scalability of your software applications with our performance testing services. Our experts help organizations develop customized performance testing solutions that meet their unique business needs.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong>Utilizing performance testing frameworks and tools like JMeter, LoadRunner, and NeoLoad, we provide customized performance testing services that integrate test planning, test execution, and test reporting. Our performance testing services include performance test planning, performance test execution, and performance test reporting.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong>Kasturi Solutions' performance testing experts collaborate with your team to identify key performance testing objectives and develop tailored performance testing solutions that address your specific needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                      'Software-Security-Testing': `
+                        <h3>Software Security Testing</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Ensure the security and integrity of your software applications with our security testing services. Our experts help organizations develop customized security testing solutions that meet their unique business needs.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing security testing frameworks and tools like OWASP, Burp Suite, and ZAP, we provide customized security testing services that integrate test planning, test execution, and test reporting. Our security testing services include security test planning, security test execution, and security test reporting.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our security testing experts work closely with your team to understand your security testing objectives and develop tailored security testing solutions that meet your needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                        'Software-Quality-Assurance-(QA)': `
+                        <h3>Software Quality Assurance (QA)</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Ensure the quality and reliability of your software applications with our software QA services. Our experts help organizations develop customized QA solutions that meet their unique business needs.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing QA frameworks and methodologies like Agile, Scrum, and Waterfall, we provide customized QA services that integrate test planning, test execution, and test reporting. Our QA services include test case development, test execution, defect reporting, and test automation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' QA experts collaborate with your team to identify key QA objectives and develop tailored QA solutions that address your specific needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`                          
+                    };
+          
+                    const developmentContent = document.getElementById('development-content');
+                    developmentContent.style.opacity = 0;
+          
+                    setTimeout(() => {
+                      developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
+                      developmentContent.style.opacity = 1;
+                      if(!isInitialLoad && filterButtonClicked){
+                        developmentContent.scrollIntoView({behavior:"smooth",block:"nearest"})
+                      }
+                    }, 300);
+                  }
+          
+                  window.onload = function() {
+                    filterDevelopment('Organizational-CMMI-Quality-Assurance',true);
+                  };
+                  // Attach click event listeners to filter buttons
+                  document.addEventListener('DOMContentLoaded', () => {
+                    const buttons = document.querySelectorAll('.development-filter-btn');
+                    buttons.forEach(button => {
+                      button.addEventListener('click', () => {
+                        filterButtonClicked = true; // Mark that a button was clicked
+                      });
+                    });
+                  });
+                </script>
+            </section>
+          </div>            
+        </div>
 
-              <div class="service-box" data-aos="fade-up" data-aos-delay="400">
-                <h4>Ready to Secure Your Business?</h4>
-                <p>Contact us today to learn how Kasturi Solutions can help you.</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                  <!-- Google Form Link -->
-                  <p class="d-flex align-items-center mb-0" style="margin-right: 10px;">
-                    <i class="bi bi-google me-2"></i>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_JPuWDESKD26TdwunNeHQNbWnwy7RsaSL5kZvydr7DPnk2A/viewform?embedded=true" target="_blank" style="
+        <div class="row gy-1">
+          <div class="col-lg-5">
+            <div class="service-box" data-aos="fade-up" data-aos-delay="300">
+              <h4>Download Catalog</h4>
+              <div class="download-catalog">
+                <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
+                <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col lg-7">
+            <div class="service-box" data-aos="fade-up" data-aos-delay="400">
+              <h4>Ready to Secure Your Business?</h4>
+              <p>Contact us today to learn how Kasturi Solutions can help you.</p>
+              
+              <div class="d-flex align-items-center justify-content-between">
+                <!-- Google Form Link -->
+                <p class="d-flex align-items-center mb-0" style="margin-right: 10px;">
+                  <i class="bi bi-google me-2"></i>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_JPuWDESKD26TdwunNeHQNbWnwy7RsaSL5kZvydr7DPnk2A/viewform?embedded=true" target="_blank" style="
+                  color: #312f2f; 
+                  border: 2px solid #25A012; 
+                  border-radius: 4px; 
+                  font-family: 'Poppins', sans-serif; 
+                  font-size: 14px; 
+                  padding: 8px 30px; 
+                  text-decoration: none; 
+                  text-align: center; 
+                  background-color: transparent; 
+                  transition: background-color 0.3s, color 0.3s;" 
+                onmouseover="this.style.backgroundColor='#25A012';" 
+                onmouseout="this.style.backgroundColor='transparent'; this.style.color='#312f2f';">Submit a Query</a>
+                </p>
+              
+                <!-- Get in Touch Button -->
+                <a href="index.html#contact" class="btn btn-primary" style="
                     color: #312f2f; 
                     border: 2px solid #25A012; 
                     border-radius: 4px; 
@@ -203,210 +405,18 @@
                     text-decoration: none; 
                     text-align: center; 
                     background-color: transparent; 
-                    transition: background-color 0.3s, color 0.3s;" 
-                  onmouseover="this.style.backgroundColor='#25A012';" 
-                  onmouseout="this.style.backgroundColor='transparent'; this.style.color='#312f2f';">Submit a Query</a>
-                  </p>
-                
-                  <!-- Get in Touch Button -->
-                  <a href="index.html#contact" class="btn btn-primary" style="
-                      color: #312f2f; 
-                      border: 2px solid #25A012; 
-                      border-radius: 4px; 
-                      font-family: 'Poppins', sans-serif; 
-                      font-size: 14px; 
-                      padding: 8px 30px; 
-                      text-decoration: none; 
-                      text-align: center; 
-                      background-color: transparent; 
-                      transition: background-color 0.3s;" 
-                      onmouseover="this.style.backgroundColor='#25A012';" 
-                      onmouseout="this.style.backgroundColor='transparent';">
-                    Get in Touch
-                  </a>
-                </div>              
-              </div>  
-          </div>
-
-            <div class="col-lg-7">
-              <section id="portfolio-details" class="portfolio-details section">
-                <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-                  <h3 style="text-align: center;">Software Quality Testing and Assurance</h3>
-                  <div class="filter-buttons">
-                    <button onclick="filterDevelopment('Organizational-CMMI-Quality-Assurance')" class="development-filter-btn active">Organizational CMMI Quality Assurance</button>
-                    <button onclick="filterDevelopment('Software-Manual-Testing-Services')" class="development-filter-btn">Software Manual Testing Services</button>
-                    <button onclick="filterDevelopment('Software-Automated-Testing-Services')" class="development-filter-btn">Software Automated Testing Services</button>
-                    <button onclick="filterDevelopment('Software-Performance-Testing')" class="development-filter-btn">Software Performance Testing</button>
-                    <button onclick="filterDevelopment('Software-Security-Testing')" class="development-filter-btn">Software Security Testing</button>
-                    <button onclick="filterDevelopment('Software-Quality-Assurance-(QA)')" class="development-filter-btn">Software Quality Assurance (QA)</button>
-                    <button onclick="filterDevelopment('Software-Engineering-Process-Group-(SEPG)-Improvement')" class="development-filter-btn active">Software Engineering Process(SEPG) Improvement</button>
-                  </div>
-                </div>
-            
-                <!-- Content Section -->
-                <section id="portfolio-details" class="portfolio-details section">
-                  <div id="development-content" class="development-content" style="text-align: justify;">
-                    <!-- Default Content -->
-                    
-                    
-                  </div>
-            
-                  <script>
-                    // Function to update the active class and load content dynamically
-                    function filterDevelopment(type) {
-                      const buttons = document.querySelectorAll('.development-filter-btn');
-                      buttons.forEach(btn => btn.classList.remove('active'));
-                      const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
-                      if (activeButton) {
-                        activeButton.classList.add('active');
-                      }
-            
-                      const content = {
-                        'Organizational-CMMI-Quality-Assurance': `
-                          <h3>Organizational CMMI Quality Assurance</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Improve the maturity of your software development processes with our CMMI quality assurance services. Our experts help organizations assess, improve, and maintain their CMMI maturity levels.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing CMMI frameworks and appraisal methods, we provide customized CMMI quality assurance services that integrate process assessment, process improvement, and process maintenance. Our CMMI quality assurance services include CMMI appraisal, process improvement planning, and process implementation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong>  Kasturi Solutions' CMMI quality assurance experts collaborate with your team to identify key process improvement areas and develop tailored CMMI quality assurance solutions that address your specific needs. We ensure seamless integration with your existing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'Software-Engineering-Process-Group-(SEPG)-Improvement': `
-                          <h3>Software Engineering Process(SEPG) Improvement</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Improve the effectiveness of your software engineering processes with our SEPG improvement services. Our experts help organizations assess, improve, and maintain their software engineering processes.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing SEPG frameworks and process improvement methods, we provide customized SEPG improvement services that integrate process assessment, process improvement, and process maintenance. Our SEPG improvement services include process assessment, process improvement planning, and process implementation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our SEPG improvement experts work closely with your team to understand your process improvement objectives and develop tailored SEPG improvement solutions that meet your needs. We ensure seamless integration with your existing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'Software-Manual-Testing-Services': `
-                          <h3>Software Manual Testing Services</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Ensure the quality and reliability of your software applications with our manual testing services. Our experts help organizations develop customized manual testing solutions that meet their unique business needs.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong>Utilizing manual testing frameworks and methodologies, we provide customized manual testing services that integrate test planning, test execution, and test reporting. Our manual testing services include test case development, test execution, and defect reporting.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong>Kasturi Solutions' manual testing experts collaborate with your team to identify key testing objectives and develop tailored manual testing solutions that address your specific needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'Software-Automated-Testing-Services': `
-                          <h3>Software Automated Testing Services</h3>
-                       
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Improve the efficiency and effectiveness of your software testing with our automated testing services. Our experts help organizations develop customized automated testing solutions that meet their unique business needs.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong>Utilizing automated testing frameworks and tools like Selenium, Appium, and TestComplete, we provide customized automated testing services that integrate test planning, test execution, and test reporting. Our automated testing services include test automation framework development, test script development, and test execution.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong>At Kasturi Solutions, our automated testing experts work closely with your team to understand your testing objectives and develop tailored automated testing solutions that meet your needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        
-                        'Software-Performance-Testing': `
-                          <h3>Software Performance Testing</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong>Ensure the performance and scalability of your software applications with our performance testing services. Our experts help organizations develop customized performance testing solutions that meet their unique business needs.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong>Utilizing performance testing frameworks and tools like JMeter, LoadRunner, and NeoLoad, we provide customized performance testing services that integrate test planning, test execution, and test reporting. Our performance testing services include performance test planning, performance test execution, and performance test reporting.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong>Kasturi Solutions' performance testing experts collaborate with your team to identify key performance testing objectives and develop tailored performance testing solutions that address your specific needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'Software-Security-Testing': `
-                          <h3>Software Security Testing</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Ensure the security and integrity of your software applications with our security testing services. Our experts help organizations develop customized security testing solutions that meet their unique business needs.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing security testing frameworks and tools like OWASP, Burp Suite, and ZAP, we provide customized security testing services that integrate test planning, test execution, and test reporting. Our security testing services include security test planning, security test execution, and security test reporting.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our security testing experts work closely with your team to understand your security testing objectives and develop tailored security testing solutions that meet your needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                          'Software-Quality-Assurance-(QA)': `
-                          <h3>Software Quality Assurance (QA)</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Ensure the quality and reliability of your software applications with our software QA services. Our experts help organizations develop customized QA solutions that meet their unique business needs.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing QA frameworks and methodologies like Agile, Scrum, and Waterfall, we provide customized QA services that integrate test planning, test execution, and test reporting. Our QA services include test case development, test execution, defect reporting, and test automation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' QA experts collaborate with your team to identify key QA objectives and develop tailored QA solutions that address your specific needs. We ensure seamless integration with your existing testing processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`                          
-                      };
-            
-                      const developmentContent = document.getElementById('development-content');
-                      developmentContent.style.opacity = 0;
-            
-                      setTimeout(() => {
-                        developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
-                        developmentContent.style.opacity = 1;
-                      }, 300);
-                    }
-            
-                    window.onload = function() {
-                      filterDevelopment('Organizational-CMMI-Quality-Assurance');
-                    };
-                  </script>
-                </section>
-              </section>
+                    transition: background-color 0.3s;" 
+                    onmouseover="this.style.backgroundColor='#25A012';" 
+                    onmouseout="this.style.backgroundColor='transparent';">
+                  Get in Touch
+                </a>
+              </div>              
             </div>
-            
-
+          </div>
         </div>
-
-      </div>
-
-    </section><!-- /Portfolio Details Section -->
+      </section>
+    </div>
+    <!-- /Portfolio Details Section -->
 
   </main>
 
