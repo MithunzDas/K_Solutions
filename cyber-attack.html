@@ -140,15 +140,14 @@
 
     <!-- Portfolio Details Section -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <section id="service-details" class="service-details section"> 
+        <div class="row gy-1">
           <div class="col-lg-5">
             <!-- Services list code here -->
-            <section id="service-details" class="service-details section">
               <div class="service-box"> 
                 <h4>Services List</h4>
-                <div class="services-list-container">
+                <div class="services-list-container" style="max-height: 620px;">
                   <div class="services-list">
                     <a href="analytics-data-insights.html"><i class="bi bi-arrow-right-circle"></i><span>Analytics and Data Insights Solutions</span></a>
                     <a href="ai-automation.html"><i class="bi bi-arrow-right-circle"></i><span>Artificial Intelligence and Automation Solutions</span></a>
@@ -174,16 +173,243 @@
                   </div>
                 </div><!-- End Services List -->
               </div>
-              <script src="assets/js/service-details-scroll.js"></script>
+          </div>  
+          <div class="col-lg-7">
+            <section id="portfolio-details" class="portfolio-details section">
+              <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                <h3 style="text-align: center;">Cybersecurity Attack Simulation and Testing</h3>
+                <div class="filter-buttons">
+                  <button onclick="filterDevelopment('Persistent-Distributed-Denial-of-Service-(DDoS)-Attack-Simulation')" class="development-filter-btn active">Distributed Denial of Service (DDoS) Attack Simulation</button>
+                  <button onclick="filterDevelopment('Threat-Hunting-and-Malware-Attack-Simulation')" class="development-filter-btn">Threat Hunting and Malware Attack Simulation</button>
+                  <button onclick="filterDevelopment('Red-Team-Adversary-Testing-(MITRE-ATT&CK)')" class="development-filter-btn">Red Team Adversary Testing (MITRE ATT&CK)</button>
+                  <button onclick="filterDevelopment('Binary-Code-Analysis-and-Fuzz-Testing')" class="development-filter-btn">Binary Code Analysis and Fuzz Testing</button>
+                  <button onclick="filterDevelopment('Exploit-Research-and-Vulnerability-Testing')" class="development-filter-btn">Exploit Research and Vulnerability Testing</button>
+                  <button onclick="filterDevelopment('Malware-Analysis-Sandboxing-and-Reverse-Engineering')" class="development-filter-btn">Malware Analysis, Sandboxing, and Reverse Engineering</button>
+                  <button onclick="filterDevelopment('Security-Penetration-Blackbox-Testing')" class="development-filter-btn">Security Penetration Blackbox Testing</button>
+                  <button onclick="filterDevelopment('Threat-Intelligence')" class="development-filter-btn">Threat Intelligence</button>
+                  <button onclick="filterDevelopment('Phishing-Attack-Simulation')" class="development-filter-btn">Phishing Attack Simulation</button>
+                </div>
+              </div>
+          
+              <!-- Content Section -->
+                <div id="development-content" class="development-content" style="text-align: justify;">
+                  <!-- Default Content -->
+                </div>
+          
+                <script>
+                  let filterButtonClicked=false;
+                  // Function to update the active class and load content dynamically
+                  function filterDevelopment(type,isInitialLoad=false) {
+                    const buttons = document.querySelectorAll('.development-filter-btn');
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
+                    if (activeButton) {
+                      activeButton.classList.add('active');
+                    }
+          
+                    const content = {
+                      'Persistent-Distributed-Denial-of-Service-(DDoS)-Attack-Simulation': `
+                        <h3>Distributed Denial of Service (DDoS) Attack Simulation</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Test your defenses against DDoS attacks with our simulation services. Our experts simulate DDoS attacks to identify vulnerabilities and provide recommendations for improvement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing DDoS simulation tools like Apache JMeter and Locust, we provide customized DDoS attack simulation services that integrate traffic simulation, vulnerability identification, and mitigation strategy development. Our DDoS attack simulation services include traffic simulation, vulnerability identification, and mitigation strategy development.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong>  Kasturi Solutions' DDoS attack simulation experts collaborate with your team to identify key testing objectives and develop tailored DDoS attack simulation solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'Threat-Hunting-and-Malware-Attack-Simulation': `
+                        <h3>Threat Hunting and Malware Attack Simulation</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Identify and respond to advanced threats with our threat hunting and malware attack simulation services. Our experts simulate malware attacks to identify vulnerabilities and provide recommendations for improvement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing threat hunting and malware simulation tools like MITRE ATT&CK and Anomali, we provide customized threat hunting and malware attack simulation services that integrate threat intelligence, vulnerability identification, and mitigation strategy development. Our threat hunting and malware attack simulation services include threat intelligence, vulnerability identification, and mitigation strategy development.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our threat hunting and malware attack simulation experts work closely with your team to understand your security objectives and develop tailored threat hunting and malware attack simulation solutions that meet your needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      'Red-Team-Adversary-Testing-(MITRE-ATT&CK)': `
+                        <h3>Red Team Adversary Testing (MITRE ATT&CK)</h3>
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Test your defenses against advanced threats with our red team adversary testing services. Our experts simulate advanced attacks using MITRE ATT&CK frameworks to identify vulnerabilities and provide recommendations for improvement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing MITRE ATT&CK frameworks and tools, we provide customized red team adversary testing services that integrate threat intelligence, vulnerability identification, and mitigation strategy development. Our red team adversary testing services include threat intelligence, vulnerability identification, and mitigation strategy development.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' red team adversary testing experts collaborate with your team to identify key testing objectives and develop tailored red team adversary testing solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                      'Binary-Code-Analysis-and-Fuzz-Testing': `
+                        <h3>Binary Code Analysis and Fuzz Testing</h3>
+                     
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Identify vulnerabilities in your binary code with our binary code analysis and fuzz testing services. Our experts analyze your binary code to identify vulnerabilities and provide recommendations for improvement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing binary code analysis and fuzz testing tools like IDA Pro and AFL, we provide customized binary code analysis and fuzz testing services that integrate binary code analysis, vulnerability identification, and mitigation strategy development. Our binary code analysis and fuzz testing services include binary code analysis, vulnerability identification, and mitigation strategy development.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our binary code analysis and fuzz testing experts work closely with your team to understand your security objectives and develop tailored binary code analysis and fuzz testing solutions that meet your needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+                      
+                      'Exploit-Research-and-Vulnerability-Testing': `
+                        <h3>Exploit Research and Vulnerability Testing</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Identify vulnerabilities in your systems and applications with our exploit research and vulnerability testing services. Our experts research and test exploits to identify vulnerabilities and provide recommendations for improvement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing exploit research and vulnerability testing tools like Metasploit and Burp Suite, we provide customized exploit research and vulnerability testing services that integrate exploit research, vulnerability identification, and mitigation strategy development. Our exploit research and vulnerability testing services include exploit research, vulnerability identification, and mitigation strategy development.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' exploit research and vulnerability testing experts collaborate with your team to identify key testing objectives and develop tailored exploit research and vulnerability testing solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                      'Malware-Analysis-Sandboxing-and-Reverse-Engineering': `
+                        <h3>Malware Analysis, Sandboxing, and Reverse Engineering</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Protect your network from unauthorized access with our firewall and network security design services. Our experts provide customized firewall and network security solutions that ensure the security and integrity of your network.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing firewall and network security frameworks and tools like Cisco ASA, Juniper SRX, and Check Point, we provide customized firewall and network security design services that integrate network security design, firewall configuration, and network segmentation. Our firewall and network security design services include network security design, firewall deployment, and network segmentation.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our firewall and network security design experts work closely with your team to understand your security objectives and develop tailored firewall and network security solutions that meet your needs. We ensure seamless integration with your existing network infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                        
+                        'Security-Penetration-Blackbox-Testing': `
+                        <h3>Security Penetration Blackbox Testing </h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Test your defenses against real-world attacks with our blackbox penetration testing services. Our experts simulate attacks on your systems and applications to identify vulnerabilities and provide recommendations for improvement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing blackbox penetration testing tools like Burp Suite and ZAP, we provide customized blackbox penetration testing services that integrate vulnerability identification, exploitation, and reporting. Our blackbox penetration testing services include vulnerability identification, exploitation, and reporting.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' blackbox penetration testing experts collaborate with your team to identify key testing objectives and develop tailored blackbox penetration testing solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                        'Threat-Intelligence': `
+                        <h3>Threat Intelligence</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Stay ahead of emerging threats with our threat intelligence services. Our experts provide actionable intelligence on potential threats to help you make informed security decisions.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing threat intelligence frameworks and tools like MITRE ATT&CK and Anomali, we provide customized threat intelligence services that integrate threat data collection, analysis, and reporting. Our threat intelligence services include threat data collection, analysis, and reporting.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> At Kasturi Solutions, our threat intelligence experts work closely with your team to understand your security objectives and develop tailored threat intelligence solutions that meet your needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                        'Phishing-Attack-Simulation': `
+                        <h3>Phishing Attack Simulation</h3>
+                        
+                        <table style="width: 100%; border-spacing: 0 10px;">
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Overview:</strong> Test your defenses against phishing attacks with our phishing attack simulation services. Our experts simulate phishing attacks to identify vulnerabilities and provide recommendations for improvement.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Technical Details:</strong> Utilizing phishing simulation tools like PhishMe and KnowBe4, we provide customized phishing attack simulation services that integrate phishing simulation, vulnerability identification, and reporting. Our phishing attack simulation services include phishing simulation, vulnerability identification, and reporting.</td>
+                          </tr>
+                          <tr>
+                            <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                            <td><strong>Implementation:</strong> Kasturi Solutions' phishing attack simulation experts collaborate with your team to identify key testing objectives and develop tailored phishing attack simulation solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
+                          </tr>
+                        </table>`,
+          
+                    };
+          
+                    const developmentContent = document.getElementById('development-content');
+                    developmentContent.style.opacity = 0;
+          
+                    setTimeout(() => {
+                      developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
+                      developmentContent.style.opacity = 1;
+                      if(!isInitialLoad && filterButtonClicked){
+                        developmentContent.scrollIntoView({behavior:"smooth",block:"nearest"})
+                      }
+                    }, 300);
+                  }
+          
+                  window.onload = function() {
+                    filterDevelopment('Persistent-Distributed-Denial-of-Service-(DDoS)-Attack-Simulation',true);
+                  };
+                  // Attach click event listeners to filter buttons
+                  document.addEventListener('DOMContentLoaded', () => {
+                    const buttons = document.querySelectorAll('.development-filter-btn');
+                    buttons.forEach(button => {
+                      button.addEventListener('click', () => {
+                        filterButtonClicked = true; // Mark that a button was clicked
+                      });
+                    });
+                  });
+                </script>
               
-              <div class="service-box">
+            </section>
+          </div>   
+        </div>
+      
+        <div class="row gy-1">
+          <div class="col-lg-5">
+              <div class="service-box" data-aos="fade-up" data-aos-delay="200">
                 <h4>Download Catalog</h4>
                 <div class="download-catalog">
                   <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
                   <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
                 </div>
-              </div><!-- End Services List -->
-
+              </div>
+            <!-- Download Catalog -->
+          </div>
+          <div class="col-lg-7">
               <div class="service-box" data-aos="fade-up" data-aos-delay="400">
                 <h4>Ready to Secure Your Business?</h4>
                 <p>Contact us today to learn how Kasturi Solutions can help you.</p>
@@ -224,228 +450,12 @@
                     Get in Touch
                   </a>
                 </div>              
-              </div>  
+              </div> 
           </div>
-
-            <div class="col-lg-7">
-              <section id="portfolio-details" class="portfolio-details section">
-                <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-                  <h3 style="text-align: center;">Cybersecurity Attack Simulation and Testing</h3>
-                  <div class="filter-buttons">
-                    <button onclick="filterDevelopment('Persistent-Distributed-Denial-of-Service-(DDoS)-Attack-Simulation')" class="development-filter-btn active">Distributed Denial of Service (DDoS) Attack Simulation</button>
-                    <button onclick="filterDevelopment('Threat-Hunting-and-Malware-Attack-Simulation')" class="development-filter-btn active">Threat Hunting and Malware Attack Simulation</button>
-                    <button onclick="filterDevelopment('Red-Team-Adversary-Testing-(MITRE-ATT&CK)')" class="development-filter-btn">Red Team Adversary Testing (MITRE ATT&CK)</button>
-                    <button onclick="filterDevelopment('Binary-Code-Analysis-and-Fuzz-Testing')" class="development-filter-btn">Binary Code Analysis and Fuzz Testing</button>
-                    <button onclick="filterDevelopment('Exploit-Research-and-Vulnerability-Testing')" class="development-filter-btn">Exploit Research and Vulnerability Testing</button>
-                    <button onclick="filterDevelopment('Malware-Analysis-Sandboxing-and-Reverse-Engineering')" class="development-filter-btn">Malware Analysis, Sandboxing, and Reverse Engineering</button>
-                    <button onclick="filterDevelopment('Security-Penetration-Blackbox-Testing')" class="development-filter-btn">Security Penetration Blackbox Testing</button>
-                    <button onclick="filterDevelopment('Threat-Intelligence')" class="development-filter-btn">Threat Intelligence</button>
-                    <button onclick="filterDevelopment('Phishing-Attack-Simulation')" class="development-filter-btn">Phishing Attack Simulation</button>
-                  </div>
-                </div>
-            
-                <!-- Content Section -->
-                <section id="portfolio-details" class="portfolio-details section">
-                  <div id="development-content" class="development-content" style="text-align: justify;">
-                    <!-- Default Content -->
-                    
-                    
-                  </div>
-            
-                  <script>
-                    // Function to update the active class and load content dynamically
-                    function filterDevelopment(type) {
-                      const buttons = document.querySelectorAll('.development-filter-btn');
-                      buttons.forEach(btn => btn.classList.remove('active'));
-                      const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
-                      if (activeButton) {
-                        activeButton.classList.add('active');
-                      }
-            
-                      const content = {
-                        'Persistent-Distributed-Denial-of-Service-(DDoS)-Attack-Simulation': `
-                          <h3>Distributed Denial of Service (DDoS) Attack Simulation</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Test your defenses against DDoS attacks with our simulation services. Our experts simulate DDoS attacks to identify vulnerabilities and provide recommendations for improvement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing DDoS simulation tools like Apache JMeter and Locust, we provide customized DDoS attack simulation services that integrate traffic simulation, vulnerability identification, and mitigation strategy development. Our DDoS attack simulation services include traffic simulation, vulnerability identification, and mitigation strategy development.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong>  Kasturi Solutions' DDoS attack simulation experts collaborate with your team to identify key testing objectives and develop tailored DDoS attack simulation solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'Threat-Hunting-and-Malware-Attack-Simulation': `
-                          <h3>Threat Hunting and Malware Attack Simulation</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Identify and respond to advanced threats with our threat hunting and malware attack simulation services. Our experts simulate malware attacks to identify vulnerabilities and provide recommendations for improvement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing threat hunting and malware simulation tools like MITRE ATT&CK and Anomali, we provide customized threat hunting and malware attack simulation services that integrate threat intelligence, vulnerability identification, and mitigation strategy development. Our threat hunting and malware attack simulation services include threat intelligence, vulnerability identification, and mitigation strategy development.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our threat hunting and malware attack simulation experts work closely with your team to understand your security objectives and develop tailored threat hunting and malware attack simulation solutions that meet your needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        'Red-Team-Adversary-Testing-(MITRE-ATT&CK)': `
-                          <h3>Red Team Adversary Testing (MITRE ATT&CK)</h3>
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Test your defenses against advanced threats with our red team adversary testing services. Our experts simulate advanced attacks using MITRE ATT&CK frameworks to identify vulnerabilities and provide recommendations for improvement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing MITRE ATT&CK frameworks and tools, we provide customized red team adversary testing services that integrate threat intelligence, vulnerability identification, and mitigation strategy development. Our red team adversary testing services include threat intelligence, vulnerability identification, and mitigation strategy development.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' red team adversary testing experts collaborate with your team to identify key testing objectives and develop tailored red team adversary testing solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'Binary-Code-Analysis-and-Fuzz-Testing': `
-                          <h3>Binary Code Analysis and Fuzz Testing</h3>
-                       
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Identify vulnerabilities in your binary code with our binary code analysis and fuzz testing services. Our experts analyze your binary code to identify vulnerabilities and provide recommendations for improvement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing binary code analysis and fuzz testing tools like IDA Pro and AFL, we provide customized binary code analysis and fuzz testing services that integrate binary code analysis, vulnerability identification, and mitigation strategy development. Our binary code analysis and fuzz testing services include binary code analysis, vulnerability identification, and mitigation strategy development.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our binary code analysis and fuzz testing experts work closely with your team to understand your security objectives and develop tailored binary code analysis and fuzz testing solutions that meet your needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-                        
-                        'Exploit-Research-and-Vulnerability-Testing': `
-                          <h3>Exploit Research and Vulnerability Testing</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Identify vulnerabilities in your systems and applications with our exploit research and vulnerability testing services. Our experts research and test exploits to identify vulnerabilities and provide recommendations for improvement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing exploit research and vulnerability testing tools like Metasploit and Burp Suite, we provide customized exploit research and vulnerability testing services that integrate exploit research, vulnerability identification, and mitigation strategy development. Our exploit research and vulnerability testing services include exploit research, vulnerability identification, and mitigation strategy development.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' exploit research and vulnerability testing experts collaborate with your team to identify key testing objectives and develop tailored exploit research and vulnerability testing solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                        'Malware-Analysis-Sandboxing-and-Reverse-Engineering': `
-                          <h3>Malware Analysis, Sandboxing, and Reverse Engineering</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Protect your network from unauthorized access with our firewall and network security design services. Our experts provide customized firewall and network security solutions that ensure the security and integrity of your network.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing firewall and network security frameworks and tools like Cisco ASA, Juniper SRX, and Check Point, we provide customized firewall and network security design services that integrate network security design, firewall configuration, and network segmentation. Our firewall and network security design services include network security design, firewall deployment, and network segmentation.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our firewall and network security design experts work closely with your team to understand your security objectives and develop tailored firewall and network security solutions that meet your needs. We ensure seamless integration with your existing network infrastructure and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                          
-                          'Security-Penetration-Blackbox-Testing': `
-                          <h3>Security Penetration Blackbox Testing </h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Test your defenses against real-world attacks with our blackbox penetration testing services. Our experts simulate attacks on your systems and applications to identify vulnerabilities and provide recommendations for improvement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing blackbox penetration testing tools like Burp Suite and ZAP, we provide customized blackbox penetration testing services that integrate vulnerability identification, exploitation, and reporting. Our blackbox penetration testing services include vulnerability identification, exploitation, and reporting.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' blackbox penetration testing experts collaborate with your team to identify key testing objectives and develop tailored blackbox penetration testing solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                          'Threat-Intelligence': `
-                          <h3>Threat Intelligence</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Stay ahead of emerging threats with our threat intelligence services. Our experts provide actionable intelligence on potential threats to help you make informed security decisions.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing threat intelligence frameworks and tools like MITRE ATT&CK and Anomali, we provide customized threat intelligence services that integrate threat data collection, analysis, and reporting. Our threat intelligence services include threat data collection, analysis, and reporting.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> At Kasturi Solutions, our threat intelligence experts work closely with your team to understand your security objectives and develop tailored threat intelligence solutions that meet your needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                          'Phishing-Attack-Simulation': `
-                          <h3>Phishing Attack Simulation</h3>
-                          
-                          <table style="width: 100%; border-spacing: 0 10px;">
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Overview:</strong> Test your defenses against phishing attacks with our phishing attack simulation services. Our experts simulate phishing attacks to identify vulnerabilities and provide recommendations for improvement.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Technical Details:</strong> Utilizing phishing simulation tools like PhishMe and KnowBe4, we provide customized phishing attack simulation services that integrate phishing simulation, vulnerability identification, and reporting. Our phishing attack simulation services include phishing simulation, vulnerability identification, and reporting.</td>
-                            </tr>
-                            <tr>
-                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
-                              <td><strong>Implementation:</strong> Kasturi Solutions' phishing attack simulation experts collaborate with your team to identify key testing objectives and develop tailored phishing attack simulation solutions that address your specific needs. We ensure seamless integration with your existing security processes and provide ongoing support to help you maximize the benefits of our solutions.</td>
-                            </tr>
-                          </table>`,
-
-                      };
-            
-                      const developmentContent = document.getElementById('development-content');
-                      developmentContent.style.opacity = 0;
-            
-                      setTimeout(() => {
-                        developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
-                        developmentContent.style.opacity = 1;
-                      }, 300);
-                    }
-            
-                    window.onload = function() {
-                      filterDevelopment('Persistent-Distributed-Denial-of-Service-(DDoS)-Attack-Simulation');
-                    };
-                  </script>
-                </section>
-              </section>
-            </div>
-            
-
         </div>
-
-      </div>
-
-    </section><!-- /Portfolio Details Section -->
+      </section>      
+    </div>
+    <!-- /Portfolio Details Section -->
 
   </main>
 
@@ -540,6 +550,7 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/js/service-details-scroll.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
