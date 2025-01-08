@@ -1237,6 +1237,13 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+#services {
+  background-image:url('/assets/img/Our_Solution_bg_images.jpeg');
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; 
+  background-attachment: fixed; 
+  padding: 50px 0; /* Adds spacing within the section */
+}
 
 
 .scroll-wrapper {
@@ -1254,7 +1261,7 @@ section,
 }
 
 .scroll-btn {
-  background-color: #f1f1f1;
+  background-color: #0A2209;
   color: #888;
   border: none;
   padding: 10px;
@@ -1262,6 +1269,10 @@ section,
   border-radius: 50%;
   position: absolute;
   z-index: 10;
+}
+.scroll-btn:hover {
+  background-color: #25A012;
+  color: #000000;
 }
 
 .scroll-btn.left {
@@ -1315,7 +1326,7 @@ section,
 
 /* Service Item Styles */
 .service-item {
-  background-color: var(--surface-color);
+  background: linear-gradient(135deg, #000000 80%, #0A2209 20%);
   flex: 0 0 220px; /* Fixed width for each item */
   max-width: 220px; /* Ensure items don’t stretch beyond this width */
   height: 220px; /* Fixed height */
@@ -1324,7 +1335,7 @@ section,
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Center content vertically */
-  border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 70%);
+  border: 1px solid #25A012;
   padding: 15px;
   border-radius: 10px;
   box-sizing: border-box; /* Include padding in box size */
@@ -1336,7 +1347,7 @@ section,
 
 .service-item:hover {
   transform: translateY(-5px); /* Lift slightly on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .service-item:hover h3,
@@ -1360,6 +1371,7 @@ section,
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 8px;
+  color: #fff;
   white-space: normal; /* Allow text wrapping */
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1375,6 +1387,7 @@ section,
   white-space: normal;
   flex-grow: 1; /* Ensure paragraphs fill remaining space */
   margin: 0;
+  color: #f2f2f2;
 }
 
 /* Responsive Styles for Smaller Screens */
@@ -2162,9 +2175,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
 /*--------------------------------------------------------------
 # Training Program filter style
