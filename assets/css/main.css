@@ -1233,7 +1233,6 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
-
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1251,6 +1250,7 @@ section,
   align-items: center;
   position: relative;
   overflow: hidden; /* Prevent scrolling outside the wrapper */
+  padding:0 50px ;   /* Add space for the buttons */
 }
 
 .scroll-container {
@@ -1258,17 +1258,25 @@ section,
   overflow-x: auto; /* Horizontal scrolling */
   white-space: nowrap; /* Prevent content wrapping */
   scroll-behavior: smooth;
+  padding: 10px 0;
 }
 
 .scroll-btn {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 10;
   background-color: #0A2209;
   color: #888;
   border: none;
   padding: 10px;
+  border-radius: 50%; 
   cursor: pointer;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 10;
+  width: 40px;  
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .scroll-btn:hover {
   background-color: #25A012;
@@ -1276,11 +1284,11 @@ section,
 }
 
 .scroll-btn.left {
-  left: 0;
+  left: 0px;
 }
 
 .scroll-btn.right {
-  right: 0;
+  right: 0px;
 }
 
 
@@ -1338,6 +1346,7 @@ section,
   border: 1px solid #25A012;
   padding: 15px;
   border-radius: 10px;
+  margin-right: 10px;  
   box-sizing: border-box; /* Include padding in box size */
   overflow: hidden; /* Prevent overflow issues */
   transition: transform 0.3s, box-shadow 0.3s;
@@ -1412,6 +1421,17 @@ section,
     flex: 0 0 140px; /* Smaller fixed size for tiny screens */
     max-width: auto;
     height: auto; /* Keep height equal to width for square boxes */
+  }
+}
+@media (max-width: 768px) {
+  .scroll-content, .scroll-container {
+      gap: 1.5px; /* Further reduce gap for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-content, .scroll-container {
+      gap: 1px; /* Smallest gap for narrow screens */
   }
 }
 

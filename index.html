@@ -593,23 +593,23 @@
     </section>
 
     <script>
-        
-        function scrollRight() {
+      function scrollRight() {
         const container = document.querySelector('.scroll-container');
         if (container) {
-          container.scrollBy({ left: container.offsetWidth / 2, behavior: 'smooth' });
+          const itemWidth = container.querySelector('.service-item').offsetWidth + 10; // Include margin
+          container.scrollBy({ left: itemWidth, behavior: 'smooth' });
         }
       }
 
       function scrollLeft() {
         const container = document.querySelector('.scroll-container');
         if (container) {
-          container.scrollBy({ left: -container.offsetWidth / 2, behavior: 'smooth' });
+          const itemWidth = container.querySelector('.service-item').offsetWidth + 10; // Include margin
+          container.scrollBy({ left: -itemWidth, behavior: 'smooth' });
         }
       }
-
     </script>
-
+    <!-- /Service Section -->
 
 
 
