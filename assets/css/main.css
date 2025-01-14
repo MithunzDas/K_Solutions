@@ -1410,6 +1410,11 @@ section,
     max-width: 180px;
     height: 180px; /* Keep height equal to width for square boxes */
   }
+  #services {
+    background-image: url('/assets/img/Our_Solution_bg_images.jpeg');
+    background-size: cover;
+    background-position: center;
+}
 }
 
 @media (max-width: 480px) {
