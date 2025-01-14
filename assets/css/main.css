@@ -1405,6 +1405,10 @@ section,
     justify-content: space-around; /* Ensure proper spacing on smaller screens */
   }
 
+  .scroll-content, .scroll-container {
+    gap: 1.5px; /* Further reduce gap for smaller screens */
+}
+
   .service-item {
     flex: 0 0 180px; /* Reduce size for smaller screens */
     max-width: 180px;
@@ -1414,7 +1418,7 @@ section,
     background-image: url('/assets/img/Our_Solution_bg_images.jpeg');
     background-size: cover;
     background-position: center;
-}
+  }
 }
 
 @media (max-width: 480px) {
@@ -1427,19 +1431,15 @@ section,
     max-width: auto;
     height: auto; /* Keep height equal to width for square boxes */
   }
-}
-@media (max-width: 768px) {
   .scroll-content, .scroll-container {
-      gap: 1.5px; /* Further reduce gap for smaller screens */
+    gap: 1px; /* Smallest gap for narrow screens */
+  }
+  #services {
+    background-image: url('/assets/img/Our_Solution_bg_images.jpeg');
+    background-size: cover;
+    background-position: center;
   }
 }
-
-@media (max-width: 480px) {
-  .scroll-content, .scroll-container {
-      gap: 1px; /* Smallest gap for narrow screens */
-  }
-}
-
 
 /*--------------------------------------------------------------
 # Call To Action Section
