@@ -1237,6 +1237,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 #services {
+  background-image:url('/assets/img/Our_Solution_bg_images.jpeg')!important;
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; 
   background-attachment: fixed; 
