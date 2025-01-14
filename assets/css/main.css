@@ -1237,7 +1237,6 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 #services {
-  background-image:url('/assets/img/Our_Solution_bg_images.jpeg')!important;
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; 
   background-attachment: fixed; 
@@ -1414,11 +1413,6 @@ section,
     max-width: 180px;
     height: 180px; /* Keep height equal to width for square boxes */
   }
-  #services {
-    background-image: url('/assets/img/Our_Solution_bg_images.jpeg');
-    background-size: cover;
-    background-position: center;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1433,11 +1427,6 @@ section,
   }
   .scroll-content, .scroll-container {
     gap: 1px; /* Smallest gap for narrow screens */
-  }
-  #services {
-    background-image: url('/assets/img/Our_Solution_bg_images.jpeg');
-    background-size: cover;
-    background-position: center;
   }
 }
 
