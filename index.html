@@ -163,10 +163,7 @@
         </div>
       </div>  
     </section><!-- /Hero Section -->
-      
-
     
-
     <!-- About Section -->
     <section id="about" class="about section">
 
@@ -311,7 +308,7 @@
     
       <div class="container">
         <div class="scroll-wrapper">
-          <button class="scroll-btn left" onclick="scrollLeft()">&#8592;</button>
+          <button class="scroll-btn left" onclick="scrollLeftCustom()">&#8592;</button>
           <div class="scroll-container">
             <div class="scroll-content">
 
@@ -591,28 +588,7 @@
         </div>  
       </div>
     </section>
-
-    <script>
-      function scrollRight() {
-        const container = document.querySelector('.scroll-container');
-        if (container) {
-          const itemWidth = container.querySelector('.service-item').offsetWidth + 10; // Include margin
-          container.scrollBy({ left: itemWidth, behavior: 'smooth' });
-        }
-      }
-
-      function scrollLeft() {
-        const container = document.querySelector('.scroll-container');
-        if (container) {
-          const itemWidth = container.querySelector('.service-item').offsetWidth + 10; // Include margin
-          container.scrollBy({ left: -itemWidth, behavior: 'smooth' });
-        }
-      }
-    </script>
     <!-- /Service Section -->
-
-
-
 
   <!-- Industries  Section -->
 
@@ -898,6 +874,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/left_right_arrow.js"></script>
 
 </body>
 
