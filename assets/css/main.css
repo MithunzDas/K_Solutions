@@ -2044,7 +2044,12 @@ section,
 }
 
 
+/* Service Details */
 
+.service-details {
+  margin-top: 0; /* Remove margin from the top */
+  padding-top: 10px; /* Optional: Add minimal padding */
+}
 
 .service-details .service-box {
   background-color: var(--surface-color);
@@ -2412,4 +2417,49 @@ section,
   }
 }
 
+
+/* Styles scoped to MSP-filter-button section */
+.MSP-filter-button {
+  margin-top: 0; /* Remove margin from the top */
+  padding-top: 10px; /* Optional: Add minimal padding */
+  margin-bottom: 0;
+}
+
+.MSP-filter-button .filter-buttons {
+  display: flex;
+  justify-content: space-between; /* Space evenly between buttons */
+  background-color: #2a2727; /* Dark background for nav section */
+  padding: 10px 15px;
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.MSP-filter-button .filter-buttons .col-lg-3 {
+  flex: 1; /* Equal width for each button container */
+  display: flex;
+  justify-content: center; /* Center align the buttons */
+}
+
+.MSP-filter-button .filter-btn {
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  border: 2px solid #444444; /* Dark gray border */
+  background-color: #25A012; /* Green background for buttons */
+  color: #fff; /* White text */
+  border-radius: 4px; /* Rounded button corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.MSP-filter-button .filter-btn:hover {
+  background-color: #444444; /* Dark gray background on hover */
+  color: #25A012; /* Green text on hover */
+}
+
+.MSP-filter-button .filter-btn.active {
+  background-color: #444444; /* Dark gray background for active button */
+  color: #25A012; /* Green text for active button */
+  border-color: #25A012; /* Green border for active button */
+}
 
