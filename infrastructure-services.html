@@ -186,10 +186,10 @@
                 <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
                   <h3 style="text-align: center;">Services Included</h3>
                   <div class="filter-buttons" style="grid-template-columns: repeat(2, 1fr);">
-                    <button onclick="filterDevelopment('Artificial-Intelligence-AI-Applications')" class="development-filter-btn active">Server Management</button>
-                    <button onclick="filterDevelopment('Machine-Learning-ML-Training-Models')" class="development-filter-btn">Network Management</button>
-                    <button onclick="filterDevelopment('AI-Automation-Orchestration')" class="development-filter-btn">Cloud Management</button>
-                    <button onclick="filterDevelopment('Robotic-Process-Automation-(RPA)')" class="development-filter-btn">Data Center Management</button>
+                    <button onclick="filterDevelopment('Server-Management')" class="development-filter-btn active">Server Management</button>
+                    <button onclick="filterDevelopment('Network-Management')" class="development-filter-btn">Network Management</button>
+                    <button onclick="filterDevelopment('Cloud-Management')" class="development-filter-btn">Cloud Management</button>
+                    <button onclick="filterDevelopment('Data-Center-Management')" class="development-filter-btn">Data Center Management</button>
                   </div>
                 </div>
             
@@ -211,7 +211,7 @@
                     }
           
                     const content = {
-                      'Artificial-Intelligence-AI-Applications': `
+                      'Server-Management': `
                         <h3>Server Management</h3>
                         <table style="width: 100%; border-spacing: 0 10px;">
                           <tr>
@@ -227,7 +227,7 @@
                             <td>Ensuring servers are always up-to-date, secure, and running at peak performance.</td>
                           </tr>
                         </table>`,
-                      'Machine-Learning-ML-Training-Models': `
+                      'Network-Management': `
                         <h3>Network Management</h3>
                         <table style="width: 100%; border-spacing: 0 10px;">
                           <tr>
@@ -239,7 +239,7 @@
                             <td>Performance monitoring, configuration management, and fault management</td>
                           </tr>
                         </table>`,
-                      'AI-Automation-Orchestration': `
+                      'Cloud-Management': `
                         <h3>Cloud Management</h3>
                         <table style="width: 100%; border-spacing: 0 10px;">
                           <tr>
@@ -252,7 +252,7 @@
                           </tr>
                         </table>`,
 
-                      'Robotic-Process-Automation-(RPA)': `
+                      'Data-Center-Management': `
                         <h3>Data Center Management</h3>
                       
                         <table style="width: 100%; border-spacing: 0 10px;">
@@ -282,7 +282,7 @@
           
                   window.onload = function() {
                     // Trigger default content without scroll
-                    filterDevelopment('Artificial-Intelligence-AI-Applications',true);
+                    filterDevelopment('Server-Management',true);
                   };
 
                   // Attach click event listeners to filter buttons
