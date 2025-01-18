@@ -2418,48 +2418,87 @@ section,
 }
 
 
-/* Styles scoped to MSP-filter-button section */
-.MSP-filter-button {
-  margin-top: 0; /* Remove margin from the top */
-  padding-top: 10px; /* Optional: Add minimal padding */
-  margin-bottom: 0;
-}
 
-.MSP-filter-button .filter-buttons {
-  display: flex;
-  justify-content: space-between; /* Space evenly between buttons */
-  background-color: #2a2727; /* Dark background for nav section */
-  padding: 10px 15px;
-  border-radius: 8px; /* Optional: rounded corners */
-}
+/* MSP Offerings at index page */
 
-.MSP-filter-button .filter-buttons .col-lg-3 {
-  flex: 1; /* Equal width for each button container */
-  display: flex;
-  justify-content: center; /* Center align the buttons */
-}
-
-.MSP-filter-button .filter-btn {
-  width: 100%;
-  padding: 12px 20px;
+.msp-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
   text-align: center;
-  border: 2px solid #444444; /* Dark gray border */
-  background-color: #25A012; /* Green background for buttons */
-  color: #fff; /* White text */
-  border-radius: 4px; /* Rounded button corners */
+  background-color: var(--background-color);
+}
+
+.msp-section h1 {
+  color: var(--contrast-color);
+  margin-bottom: 2rem;
+}
+
+.msp-section .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.msp-section .image-box {
+  width: 250px;
+  height: 180px;
+  background-color: var(--default-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.msp-section .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.msp-section .image-box span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.msp-section .image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--accent-color);
+  border: 2px solid #25A012;
+}
+
+.msp-section .image-box:hover span {
+  
+  color: #25A012; /* Directly applied hover text color */
+}
+
+.msp-section .hidden {
+  display: none;
+  gap: 1rem; /* Ensures spacing between hidden images */
+}
+
+.msp-section .show-more-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
 }
 
-.MSP-filter-button .filter-btn:hover {
-  background-color: #444444; /* Dark gray background on hover */
-  color: #25A012; /* Green text on hover */
+.msp-section .show-more-btn:hover {
+  background-color: #1e8f10;
 }
-
-.MSP-filter-button .filter-btn.active {
-  background-color: #444444; /* Dark gray background for active button */
-  color: #25A012; /* Green text for active button */
-  border-color: #25A012; /* Green border for active button */
-}
-

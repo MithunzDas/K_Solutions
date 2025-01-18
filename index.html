@@ -71,7 +71,7 @@
             </ul>
           </li>
 
-          <li class="dropdown"><a href="MSP-Offerings.html"><span>MSP Offerings</span>   <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#MSP"><span>MSP Offerings</span>   <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="infrastructure-services.html">Infrastructure Managed Services</a></li>
               <li><a href="Application-Services.html">Application Managed Services</a></li>
@@ -193,62 +193,6 @@
 
     </section><!-- /About Section -->
 
-    <!-- Clients Section -->
-    <!-- <section id="clients" class="clients section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section> -->
-    <!-- /Clients Section -->
 
     <!-- Features Section -->
     <section id="features" class="features section">
@@ -590,8 +534,42 @@
     </section>
     <!-- /Service Section -->
 
-  <!-- Industries  Section -->
+    <!-- MSP Section -->
+    <section id="MSP" class="msp-section">
+      <h1>MSP Offerings</h1>
+      <div class="image-grid">
+          <a href="infrastructure-services.html" class="image-box"><img src="assets/img/MSP/Infrastructure Managed Services-Small.JPG" alt="Infrastructure Managed Services"><span>Infrastructure Managed Services</span></a>
+          <a href="Application-Services.html" class="image-box"><img src="assets/img/MSP/Application Managed Service-small.JPG" alt="Application Managed Services"><span>Application Managed Services</span></a>
+          <a href="Cybersecurity-Services.html" class="image-box"><img src="assets/img/MSP/Cybersecurity Managed Service-Small.JPG" alt="Cybersecurity Managed Services"><span>Cybersecurity Managed Services</span></a>
+          <a href="Data-Analytics-Services.html" class="image-box"><img src="assets/img/MSP/Data and Analytics Managed Services-Small.PNG" alt="Data and Analytics Managed Services"><span>Data & Analytics Managed Services</span></a>
+          <div class="hidden">
+              <a href="EndUser-Computing-Services.html" class="image-box"><img src="assets/img/MSP/End User Computing Managed Services-small.JPG" alt="End-User Computing Managed Services"><span>End-User Computing Managed Services</span></a>
+              <a href="Leadership-Advisory-Services.html" class="image-box"><img src="assets/img/MSP/Leadership Managed Services-small.JPG" alt="Leadership and Advisory Managed Services"><span>Leadership and Advisory Managed Services</span></a>
+              <a href="Business-Continuity-Services.html" class="image-box"><img src="assets/img/MSP/Business Continuity and Disaster Recovery-Small.JPG" alt="Business Continuity and Disaster Recovery"><span>Business Continuity and Disaster Recovery</span></a>
+          </div>
+      </div>
+      <button class="show-more-btn">More</button>
+  </section>
 
+  <script>
+      const moreButton = document.querySelector('.show-more-btn');
+      const hiddenItems = document.querySelector('.hidden');
+
+      moreButton.addEventListener('click', () => {
+          if (hiddenItems.style.display === 'none' || hiddenItems.style.display === '') {
+              hiddenItems.style.display = 'flex';
+              moreButton.textContent = 'Show Less';
+          } else {
+              hiddenItems.style.display = 'none';
+              moreButton.textContent = 'More';
+          }
+      });
+  </script>
+
+    <!-- /MSP Section -->
+
+
+  <!-- Industries  Section -->
   <section id="industries" class="industries section dark-background">
 
     <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
@@ -641,7 +619,6 @@
       </div>
     </div>  
 </section>
-
   <!-- /Industries Section -->
 
     <!-- /Service Section -->
