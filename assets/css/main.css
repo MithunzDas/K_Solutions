@@ -2421,17 +2421,24 @@ section,
 
 /* MSP Offerings at index page */
 
+/* Default styles for larger screens */
 .msp-section {
-  max-width: 1200px;
-  margin: 2rem auto;
+  min-width: 1200px;
   padding: 1rem;
   text-align: center;
   background-color: var(--background-color);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .msp-section h1 {
-  color: var(--contrast-color);
-  margin-bottom: 2rem;
+  color: #1e8f10;
+  margin-bottom: 4rem;
+  text-align: left;
+  margin-left: 2rem;
+  font-weight: 720;
 }
 
 .msp-section .image-grid {
@@ -2501,4 +2508,48 @@ section,
 
 .msp-section .show-more-btn:hover {
   background-color: #1e8f10;
+}
+
+/* Tablet screens (768px and above) */
+@media (max-width: 1024px) {
+  .msp-section {
+    min-width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .msp-section h1 {
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .msp-section .image-box {
+    width: 220px;
+    height: 160px;
+  }
+}
+
+/* Mobile screens (up to 767px) */
+@media (max-width: 767px) {
+  .msp-section {
+    padding: 1rem;
+    text-align: center; /* Center align content for mobile */
+  }
+
+  .msp-section h1 {
+    text-align: center; /* Center align heading for mobile */
+    margin-left: 0; /* Remove left margin */
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .msp-section .image-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for multiple rows */
+    justify-content: space-between; /* Add space between image boxes */
+    gap: 1rem;
+  }
+
+  .msp-section .image-box {
+    width: calc(50% - 0.5rem); /* Two images per row with spacing */
+    height: auto; /* Allow flexible height */
+  }
 }
