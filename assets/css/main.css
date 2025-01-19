@@ -2553,3 +2553,149 @@ section,
     height: auto; /* Allow flexible height */
   }
 }
+
+/* MSP DETAILS */
+.MSP-details {
+  background-color: var(--surface-color);
+  padding: 30px;
+  box-shadow: 0px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.MSP-details h3 {
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  text-align:left;
+  color: #25A012;
+  text-decoration: underline;
+}
+#MSP-details {
+  margin: 0; /* Reset margin if any */
+  padding: 0; /* Reset padding if any */
+}
+#MSP-details .MSP-details {
+  margin-bottom: 20px;
+  padding: 0;
+  border: none; /* Ensure no border is applied */
+}
+
+
+
+/* MSP Content Section Styles */ 
+.MSP-development-content {
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade and slide effect */
+}
+
+.MSP-development-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+  transition: color 0.3s ease; /* Add a color transition to the heading */
+
+}
+
+.MSP-development-content ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.MSP-development-content ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px); /* Initially off-screen */
+  animation: fadeInSlideUp 0.6s ease forwards; /* Slide-up and fade-in animation */
+}
+
+.tick-icon {
+  color: #25A012;
+  font-size: 18px;
+  margin-left: 20px; /* Shift tick icon slightly to the right */
+  display: inline-block; /* Ensures consistent alignment */
+  margin-top: 5px; /* Optional: Add spacing between the icon and the content */
+  flex-shrink: 0;
+  transition: transform 0.3s ease; /* Add hover effect for tick icon */
+}
+
+.MSP-development-content ul li:hover .tick-icon {
+  transform: scale(1.2); /* Scale up tick icon slightly on hover */
+}
+
+.MSP-development-content ul li strong {
+  font-size: 18px;
+  color: #312f2f;
+  transition: color 0.3s ease; /* Add a subtle color transition for the text */
+}
+
+.MSP-development-content ul li:hover strong {
+  color: #25A012; /* Change text color on hover for better interactivity */
+}
+
+.MSP-development-content ul li .description {
+  font-size: 18px;
+  color: #666;
+  margin-left: 10px;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0.3s; /* Delay the fade-in for the description */
+}
+
+/* button design */
+.MSP-details .filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  margin-bottom: 10px;
+}
+
+.MSP-details .filter-buttons button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.MSP-details .filter-buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Light highlight */
+  transform: skewX(-30deg);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.MSP-details .filter-buttons button:hover::before {
+  left: 100%;
+}
+
+.MSP-details .filter-buttons button:hover {
+  transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.MSP-details .filter-buttons button span {
+  position: relative;
+  z-index: 2; /* Ensures text stays on top of the hover effect */
+}
+
+/* for tablets and smaller screen */
+@media (max-width:762px) {
+  .MSP-details .filter-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For mobile screen */
+@media (max-width:576px) {
+  .MSP-details .filter-buttons {
+    grid-template-columns: 1fr;
+  }
+}
