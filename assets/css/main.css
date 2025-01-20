@@ -1335,7 +1335,7 @@ section,
 .service-item {
   background: linear-gradient(135deg, #000000 80%, #0A2209 20%);
   flex: 0 0 220px; /* Fixed width for each item */
-  max-width: 220px; /* Ensure items don’t stretch beyond this width */
+  width: 220px; /* Ensure items don’t stretch beyond this width */
   height: 220px; /* Fixed height */
   text-align: center;
   display: flex;
@@ -2449,8 +2449,8 @@ section,
 }
 
 .msp-section .image-box {
-  width: 250px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
   background-color: var(--default-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -2524,7 +2524,7 @@ section,
 
   .msp-section .image-box {
     width: 220px;
-    height: 160px;
+    height: 220px;
   }
 }
 
