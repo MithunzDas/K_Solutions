@@ -693,38 +693,95 @@
             </div><!-- End Info Item -->
 
           </div>
-              <!-- Feedback Contact Form -->
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-          
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-          
-                <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-          
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                </div>
-          
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-          
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-          
-                  <button type="submit">Send Message</button>
-                </div>
-          
-              </div>
-            </form>
-          </div>
+              <!-- Feedback Contact Form --> 
+              <div class="col-lg-8">
+                <form id="google-form" class="google-email-form" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row gy-4">
+            
+                        <div class="col-md-6">
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+            
+                        <div class="col-md-6">
+                            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+            
+                        <div class="col-md-12">
+                            <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+            
+                        <div class="col-md-12">
+                            <textarea id="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                        </div>
+            
+                        <div class="col-md-12 text-center">
+                            <div class="loading" style="display: none; color:#25A012;">Loading...</div>
+                            <div class="response-message" style="display: none; font-weight: bold;"></div>
+            
+                            <button type="submit">Send Message</button>
+                        </div>
+            
+                    </div>
+                </form>
+            </div>
+            
+            <script>
+            document.getElementById("google-form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+            
+                let loadingMessage = document.querySelector(".loading");
+                let responseMessage = document.querySelector(".response-message");
+            
+                // Show loading message
+                loadingMessage.style.display = "block";
+                loadingMessage.textContent = "Submitting...";
+            
+                // Get form values
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                let subject = document.getElementById("subject").value;
+                let message = document.getElementById("message").value;
+            
+                // Google Form POST URL
+                let formURL = "https://docs.google.com/forms/d/e/1FAIpQLSeN9vV3cDbNAcu3YP4gwduKCpJD9DhHrWOuqLloqaURg6SqeA/formResponse";
+            
+                // Create Form Data
+                let formData = new FormData();
+                formData.append("entry.1545645006", name);
+                formData.append("entry.1691868371", email);
+                formData.append("entry.1901991051", subject);
+                formData.append("entry.876544071", message);
+            
+                // Send Form Data using Fetch API
+                fetch(formURL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    body: formData
+                }).then(() => {
+                    loadingMessage.style.display = "none"; // Hide loading
+                    responseMessage.style.display = "block"; // Show success message
+                    responseMessage.style.color = "green";
+                    responseMessage.textContent = "✅ Your message has been sent. Thank you!";
+            
+                    // Auto hide success message after 3 seconds
+                    setTimeout(() => {
+                        responseMessage.style.display = "none";
+                    }, 3000);
+            
+                    document.getElementById("google-form").reset(); // Clear form after submission
+                }).catch(() => {
+                    loadingMessage.style.display = "none"; // Hide loading
+                    responseMessage.style.display = "block"; // Show error message
+                    responseMessage.style.color = "red";
+                    responseMessage.textContent = "❌ Error submitting form. Please try again.";
+            
+                    // Auto hide error message after 3 seconds
+                    setTimeout(() => {
+                        responseMessage.style.display = "none";
+                    }, 3000);
+                });
+            });
+            </script>
           
           <!-- End Contact Form -->
 
@@ -789,7 +846,7 @@
           <div class="col-lg-4 col-md-12 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <form action="forms/newsletter.php" method="post" class="google-email-form">
               <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
               <div class="loading">Loading</div>
               <div class="error-message"></div>
@@ -824,7 +881,7 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/google-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
