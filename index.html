@@ -720,61 +720,61 @@
             </div>
             
             <script>
-            document.getElementById("google-form").addEventListener("submit", function(event) {
-                event.preventDefault(); // Prevent default form submission
-            
-                let loadingMessage = document.querySelector(".loading");
-                let responseMessage = document.querySelector(".response-message");
-            
-                // Show loading message
-                loadingMessage.style.display = "block";
-                loadingMessage.textContent = "Submitting...";
-            
-                // Get form values
-                let name = document.getElementById("name").value;
-                let email = document.getElementById("email").value;
-                let subject = document.getElementById("subject").value;
-                let message = document.getElementById("message").value;
-            
-                // Google Form POST URL
-                let formURL = "https://docs.google.com/forms/d/e/1FAIpQLSeN9vV3cDbNAcu3YP4gwduKCpJD9DhHrWOuqLloqaURg6SqeA/formResponse";
-            
-                // Create Form Data
-                let formData = new FormData();
-                formData.append("entry.1545645006", name);
-                formData.append("entry.1691868371", email);
-                formData.append("entry.1901991051", subject);
-                formData.append("entry.876544071", message);
-            
-                // Send Form Data using Fetch API
-                fetch(formURL, {
-                    method: "POST",
-                    mode: "no-cors",
-                    body: formData
-                }).then(() => {
-                    loadingMessage.style.display = "none"; // Hide loading
-                    responseMessage.style.display = "block"; // Show success message
-                    responseMessage.style.color = "green";
-                    responseMessage.textContent = "✅ Your message has been sent. Thank you!";
-            
-                    // Auto hide success message after 3 seconds
-                    setTimeout(() => {
-                        responseMessage.style.display = "none";
-                    }, 3000);
-            
-                    document.getElementById("google-form").reset(); // Clear form after submission
-                }).catch(() => {
-                    loadingMessage.style.display = "none"; // Hide loading
-                    responseMessage.style.display = "block"; // Show error message
-                    responseMessage.style.color = "red";
-                    responseMessage.textContent = "❌ Error submitting form. Please try again.";
-            
-                    // Auto hide error message after 3 seconds
-                    setTimeout(() => {
-                        responseMessage.style.display = "none";
-                    }, 3000);
-                });
-            });
+              document.getElementById("google-form").addEventListener("submit", function(event) {
+                  event.preventDefault(); // Prevent default form submission
+              
+                  let loadingMessage = document.querySelector(".loading");
+                  let responseMessage = document.querySelector(".response-message");
+              
+                  // Show loading message
+                  loadingMessage.style.display = "block";
+                  loadingMessage.textContent = "Submitting...";
+              
+                  // Get form values
+                  let name = document.getElementById("name").value;
+                  let email = document.getElementById("email").value;
+                  let subject = document.getElementById("subject").value;
+                  let message = document.getElementById("message").value;
+              
+                  // Updated Google Form POST URL
+                  let formURL = "https://docs.google.com/forms/d/e/1FAIpQLScn1tX6rnMWHqtJbYxoe1_lEbicFrO0D5ckyMRWzaiRPtbRLA/formResponse";
+              
+                  // Create Form Data with updated entry IDs
+                  let formData = new FormData();
+                  formData.append("entry.888248586", name);
+                  formData.append("entry.771859506", email);
+                  formData.append("entry.1572326411", subject);
+                  formData.append("entry.240030844", message);
+              
+                  // Send Form Data using Fetch API
+                  fetch(formURL, {
+                      method: "POST",
+                      mode: "no-cors",
+                      body: formData
+                  }).then(() => {
+                      loadingMessage.style.display = "none"; // Hide loading
+                      responseMessage.style.display = "block"; // Show success message
+                      responseMessage.style.color = "green";
+                      responseMessage.textContent = "✅ Your message has been sent. Thank you!";
+              
+                      // Auto hide success message after 3 seconds
+                      setTimeout(() => {
+                          responseMessage.style.display = "none";
+                      }, 3000);
+              
+                      document.getElementById("google-form").reset(); // Clear form after submission
+                  }).catch(() => {
+                      loadingMessage.style.display = "none"; // Hide loading
+                      responseMessage.style.display = "block"; // Show error message
+                      responseMessage.style.color = "red";
+                      responseMessage.textContent = "❌ Error submitting form. Please try again.";
+              
+                      // Auto hide error message after 3 seconds
+                      setTimeout(() => {
+                          responseMessage.style.display = "none";
+                      }, 3000);
+                  });
+              });
             </script>
           
           <!-- End Contact Form -->
