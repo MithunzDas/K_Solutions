@@ -737,14 +737,14 @@
                   let message = document.getElementById("message").value;
               
                   // Updated Google Form POST URL
-                  let formURL = "https://docs.google.com/forms/d/e/1FAIpQLScn1tX6rnMWHqtJbYxoe1_lEbicFrO0D5ckyMRWzaiRPtbRLA/formResponse";
+                  let formURL = "https://docs.google.com/forms/d/e/1FAIpQLSdVr1c8Um63-VSfx5hfTX-C46Yyp9BdH0zrwHiN6LDdYphNMA/formResponse";
               
                   // Create Form Data with updated entry IDs
                   let formData = new FormData();
-                  formData.append("entry.888248586", name);
-                  formData.append("entry.771859506", email);
-                  formData.append("entry.1572326411", subject);
-                  formData.append("entry.240030844", message);
+                  formData.append("entry.1561479080", name);
+                  formData.append("entry.1409233178", email);
+                  formData.append("entry.1198842715", subject);
+                  formData.append("entry.1518757811", message);
               
                   // Send Form Data using Fetch API
                   fetch(formURL, {
